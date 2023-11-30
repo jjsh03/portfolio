@@ -74,6 +74,9 @@ $breakpoint-mobile: 768px;
   .container {
     background-color: #0a0d0f;
     color: white;
-    padding-top: toSize(100);
+  }
+  button {
+    border: 0;
+    background-color: transparent;
   }
 }
