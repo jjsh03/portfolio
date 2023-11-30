@@ -4,12 +4,12 @@ import './style.scss';
 
 export default function Main() {
   return (
-    <div>
+    <div className='mainContainer'>
       <Header />
-      <section>1</section>
-      <section>2</section>
-      <section>3</section>
-      <section>4</section>
+      <section className='introSection'> INTRO</section>
+      <section className='aboutSection'>2</section>
+      <section className='workSection'>3</section>
+      <section className='contactSection'>4</section>
     </div>
   );
 }
