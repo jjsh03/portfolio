@@ -1,7 +1,51 @@
 @import '../../config/globalStyles.scss';
+
 .header {
   z-index: 1;
   position: fixed;
   top: 0;
+  width: 100%;
+  height: toSize(100);
   display: flex;
+  padding: 0 toSize(390);
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: 'PyeongChang';
+  font-weight: 700;
+  font-size: toSize(20);
+
+  div {
+    position: relative;
+    width: toSize(132);
+    height: toSize(50);
+    text-align: center;
+    color: #7a7a7a;
+    border-bottom: 0.5px solid #7a7a7a;
+    transition: color 0.3s;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0.5px;
+      background-color: #ffffff;
+      transform-origin: left;
+      transform: scaleX(0);
+      transition: transform 0.5s;
+    }
+
+    &:hover {
+      color: white;
+      &::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  .clicked {
+    border-bottom: 0.5px solid white;
+  }
 }
