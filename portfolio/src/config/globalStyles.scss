@@ -62,6 +62,18 @@
 @import url('https://fonts.cdnfonts.com/css/crima');
 @import url('https://fonts.cdnfonts.com/css/lemon-milk');
 
+@function toSize($size) {
+  $calculatedSize: ($size / 1920) * 100;
+  @return #{$calculatedSize * 1vw};
+}
+
+$breakpoint-mobile: 768px;
+
 * {
   box-sizing: border-box;
+  .container {
+    background-color: #0a0d0f;
+    color: white;
+    padding-top: toSize(100);
+  }
 }
