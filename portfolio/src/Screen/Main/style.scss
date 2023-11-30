@@ -1,0 +1,9 @@
+@import '../../config/globalStyles.scss';
+@import url('https://webfontworld.github.io/PyeongChang/PyeongChang.css');
+section {
+  height: 100vh;
+
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
+    'Malgun Gothic', sans-serif;
+}
