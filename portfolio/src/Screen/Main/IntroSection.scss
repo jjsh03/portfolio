@@ -1,0 +1,121 @@
+@import '../../config/globalStyles.scss';
+
+.mainContainer section {
+  height: 100vh;
+  padding: toSize(100);
+  display: grid;
+  overflow: hidden;
+}
+
+.introSection {
+  grid-template-columns: toSize(960) toSize(960);
+}
+.introText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .mainTitle {
+    position: relative;
+    margin-top: toSize(300);
+  }
+  h1 {
+    position: absolute;
+    font-family: 'PyeongChangPeace';
+    font-size: toSize(80);
+  }
+  .mainTitle h1:nth-child(2) {
+    color: #5ca79c;
+    animation: wave 2s ease-in-out infinite;
+  }
+  p {
+    font-family: 'PyeongChang';
+    font-size: toSize(20);
+    margin-top: toSize(320);
+  }
+  .readMore {
+    width: toSize(275);
+    height: toSize(82);
+    margin-top: toSize(60);
+    cursor: pointer;
+    path,
+    text {
+      transition: fill 0.3s ease;
+    }
+  }
+  .readMore:hover svg text,
+  .readMore:hover svg path {
+    fill: #5ca79c;
+  }
+}
+.introPics {
+  display: flex;
+  align-items: center;
+  margin-top: toSize(200);
+  position: relative;
+
+  .waveImg {
+    background-image: url('../../asset/wave.png');
+    background-size: cover;
+    width: toSize(430);
+    height: toSize(660);
+    position: relative;
+    bottom: toSize(70);
+  }
+  .twinkleProfile {
+    position: relative;
+    .profileImg {
+      background-image: url('../../asset/profile.png');
+      background-size: cover;
+      width: toSize(430);
+      height: toSize(660);
+      z-index: 1;
+      position: relative;
+      left: toSize(-150);
+    }
+    .stars {
+      position: absolute;
+    }
+    .littleStar {
+      width: toSize(50);
+      left: 35%;
+      bottom: 90%;
+      z-index: 2;
+    }
+    .bigStar {
+      width: toSize(80);
+      left: 50%;
+      bottom: 75%;
+      z-index: 2;
+    }
+  }
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    clip-path: polygon(
+      0 45%,
+      15% 44%,
+      32% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0 60%,
+      16% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}

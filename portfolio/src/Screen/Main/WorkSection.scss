@@ -1,0 +1,60 @@
+@import '../../config/globalStyles.scss';
+
+.workSection {
+  justify-content: center;
+  .workTitle {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: toSize(100) 0;
+    position: relative;
+    h1 {
+      margin: 0;
+    }
+    h1:nth-child(1) {
+      font-family: 'crima';
+      font-size: toSize(128);
+    }
+    h1:nth-child(2) {
+      font-family: 'LEMON MILK';
+      font-size: toSize(150);
+      font-weight: 700;
+      color: #4cafa9;
+    }
+    svg {
+      position: absolute;
+      left: toSize(845);
+    }
+  }
+  .workBtns {
+    display: flex;
+    justify-content: space-between;
+
+    width: toSize(800);
+    button {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: toSize(200);
+      height: toSize(66);
+      color: #7a7a7a;
+      font-family: 'crima';
+      font-size: toSize(30);
+      transition: border, color;
+      border: 0.5px solid #7a7a7a;
+      border-radius: 999px;
+      svg {
+        display: none;
+        transition: display;
+      }
+      &:hover {
+        color: #4cafa9;
+        border-color: white;
+        svg {
+          display: inline;
+        }
+      }
+    }
+  }
+}
