@@ -3,6 +3,7 @@ import Header from '../../components/Header/Header';
 import './IntroSection.scss';
 import './AboutSection.scss';
 import './WorkSection.scss';
+import './ContactSection.scss';
 import star from '../../asset/star.svg';
 import WaterWave from 'react-water-wave';
 import communicate from '../../asset/communicate.gif';
@@ -50,6 +51,20 @@ export default function Main() {
         clip-rule="evenodd"
         d="M13.5368 17.3288C9.50405 23.676 7 30.9169 7 35.1241C7 37.0571 5.433 38.6241 3.5 38.6241C1.567 38.6241 0 37.0571 0 35.1241C0 29.0374 3.24998 20.4663 7.62847 13.5749C9.85765 10.0664 12.5154 6.77132 15.4435 4.31309C18.3278 1.89167 21.8181 0 25.6368 0C27.5698 0 29.1368 1.567 29.1368 3.5C29.1368 5.433 27.5698 7 25.6368 7C24.1412 7 22.2072 7.77461 19.9444 9.67429C17.7254 11.5372 15.5132 14.2181 13.5368 17.3288ZM38.0275 40.2355C31.1517 44.2804 24.6246 49.2913 19.938 53.0991C18.4378 54.3181 16.2335 54.09 15.0146 52.5898C13.7956 51.0896 14.0237 48.8853 15.5239 47.6663C20.3096 43.7779 27.1537 38.511 34.4781 34.2021C41.6786 29.9661 49.8799 26.3271 57.261 26.3271C59.194 26.3271 60.761 27.8941 60.761 29.8271C60.761 31.7601 59.194 33.3271 57.261 33.3271C51.8546 33.3271 45.027 36.1178 38.0275 40.2355ZM25.8634 71.0796C39.7388 67.0623 51.2658 66.3108 65.0914 69.655C66.9702 70.1094 68.8617 68.9547 69.3162 67.0759C69.7706 65.1971 68.616 63.3056 66.7371 62.8512C51.5415 59.1756 38.7635 60.0572 23.9166 64.3558C22.0599 64.8934 20.9905 66.8344 21.5281 68.6911C22.0657 70.5478 24.0066 71.6172 25.8634 71.0796Z"
         fill="#46777A"
+      />
+    </svg>
+  );
+  const arrow = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="62"
+      height="62"
+      viewBox="0 0 62 62"
+      fill="none"
+    >
+      <path
+        d="M60.7928 7.31151C60.7198 4.45546 58.3453 2.081 55.4892 2.00794L8.94598 0.819355C6.08995 0.746322 3.83397 3.00231 3.90664 5.8587C3.97969 8.71474 6.35415 11.0892 9.2102 11.1623L50.582 12.2187L51.6387 53.5907C51.7116 56.4467 54.0859 58.8209 56.9422 58.8942C59.7985 58.9668 62.0545 56.7108 61.9815 53.8549L60.7928 7.31151ZM2.83074 60.3993C4.78336 62.3519 7.94919 62.3519 9.90181 60.3993L59.3715 10.9296L51.8712 3.42922L2.40148 52.8989C0.448855 54.8516 0.44885 58.0174 2.40147 59.97L2.83074 60.3993Z"
+        fill="white"
       />
     </svg>
   );
@@ -246,7 +261,40 @@ export default function Main() {
           </section>
         )}
       </WaterWave>
-      <section className="section contactSection">4</section>
+      <WaterWave>
+        {(methods) => (
+          <section className="section contactSection">
+            <div className="contactText">
+              {arrow}
+              <table className="contactTable">
+                <tr>
+                  <td>PHONE.</td>
+                  <td>+82 10-6763-6416</td>
+                </tr>
+                <tr>
+                  <td>EMAIL</td>
+                  <td>jshyeon@naver.com</td>
+                </tr>
+                <tr>
+                  <td>GITHUB</td>
+                  <td>https://github.com/jjsh03</td>
+                </tr>
+                <tr>
+                  <td>BLOG</td>
+                  <td>https://code-sage.tistory.com</td>
+                </tr>
+              </table>
+            </div>
+            <div className="contactForm">
+              <input className="urName" placeholder="Your Name"></input>
+              <input className="urMail" placeholder="Your E-Mail"></input>
+              <textarea className="urContent" placeholder="Content"></textarea>
+              <button className="contactSend">SEND</button>
+            </div>
+            <div className="touch">GET IN TOUCH</div>
+          </section>
+        )}
+      </WaterWave>
     </div>
   );
 }
