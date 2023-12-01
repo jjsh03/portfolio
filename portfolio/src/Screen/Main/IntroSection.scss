@@ -2,6 +2,7 @@
 
 .mainContainer section {
   height: 100vh;
+  height: var(--vh);
   padding: toSize(100);
   display: grid;
   overflow: hidden;

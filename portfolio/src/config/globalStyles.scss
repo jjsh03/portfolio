@@ -80,3 +80,9 @@ $breakpoint-mobile: 768px;
     background-color: transparent;
   }
 }
+body {
+  margin: 0;
+}
+:root {
+  --vh: 100%;
+}
