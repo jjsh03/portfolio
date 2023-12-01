@@ -1,0 +1,69 @@
+@import '../../config/globalStyles.scss';
+
+.aboutSection {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.5)),
+    url('../../asset/wave.gif');
+  background-size: cover;
+
+  .aboutMe {
+    font-family: 'LEMON MILK';
+    font-size: toSize(350);
+    font-weight: 700;
+    text-wrap: nowrap;
+    position: relative;
+    left: toSize(-170);
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    margin: 0;
+  }
+
+  .aboutContent {
+    display: grid;
+    grid-template-columns: toSize(1080) toSize(640);
+  }
+
+  .aboutOverviewTitle,
+  .aboutSkillTitle {
+    font-family: 'crima';
+    font-size: toSize(22);
+    margin: toSize(16) 0;
+  }
+
+  .aboutSkillTitle {
+    margin-top: toSize(70);
+  }
+
+  .overviewContent,
+  .skillContent {
+    font-family: 'PyeongChang';
+    font-size: toSize(20);
+
+    span {
+      text-decoration-line: underline;
+      font-weight: 700;
+      transition: color 0.3s ease;
+      &:hover {
+        color: #5ca79c;
+      }
+    }
+  }
+
+  .skillContent {
+    display: flex;
+
+    .skills {
+      margin-left: toSize(56);
+    }
+  }
+
+  .aboutPics {
+    display: flex;
+    justify-content: center;
+  }
+
+  .aboutGif {
+    width: toSize(500);
+    height: toSize(250);
+    border-radius: 999px;
+  }
+}
