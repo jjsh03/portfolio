@@ -1,9 +1,10 @@
 @import '../../config/globalStyles.scss';
 
-.aboutSection {
+.mainContainer .aboutSection {
   background-image: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.5)),
     url('../../asset/wave.gif');
   background-size: cover;
+  padding-top: 0;
 
   .aboutMe {
     font-family: 'LEMON MILK';

@@ -1,6 +1,7 @@
 @import '../../config/globalStyles.scss';
 
-.contactSection {
+.mainContainer .contactSection {
+  padding-top: 0;
   grid-template-columns: toSize(760) toSize(960);
   grid-template-rows: toSize(700) auto;
   grid-auto-flow: dense;

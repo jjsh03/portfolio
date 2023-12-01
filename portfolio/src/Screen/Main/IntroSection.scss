@@ -17,7 +17,7 @@
   justify-content: center;
   .mainTitle {
     position: relative;
-    margin-top: toSize(300);
+    margin-top: toSize(150);
   }
   h1 {
     position: absolute;
@@ -51,7 +51,7 @@
 .introPics {
   display: flex;
   align-items: center;
-  margin-top: toSize(200);
+  margin-top: toSize(100);
   position: relative;
 
   .waveImg {
