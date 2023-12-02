@@ -1,11 +1,22 @@
-@import '../../../config/globalStyles.scss';
+@import '../../config/globalStyles.scss';
 
 .workContainer section {
   height: 100vh;
-  // height: var(--vh);
   padding: toSize(160) toSize(390);
   display: grid;
-  // overflow: hidden;
+}
+
+.homeBar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: toSize(30) toSize(70);
+  position: fixed;
+  z-index: 99;
+  .home {
+    width: toSize(60);
+    cursor: pointer;
+  }
 }
 
 .webList {
@@ -53,14 +64,14 @@
 }
 
 .webList:first-child::after {
-  background-image: url('../../../asset/mealsac_thumbnail.JPG');
+  background-image: url('../../asset/mealsac_thumbnail.JPG');
 }
 .webList:nth-child(2)::after {
-  background-image: url('../../../asset/beatbay_thumbnail.JPG');
+  background-image: url('../../asset/beatbay_thumbnail.JPG');
 }
 .webList:nth-child(3)::after {
   background-color: #4cafa9;
 }
 .webList:nth-child(4)::after {
-  background-image: url('../../../asset/portfolio_thumbnail.JPG');
+  background-image: url('../../asset/portfolio_thumbnail.JPG');
 }

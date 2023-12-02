@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import './style.scss';
-import WorkMenu from '../../../components/WorkMenu/WorkMenu';
-import Header from '../../../components/Header/Header';
+import WorkMenu from '../../components/WorkMenu/WorkMenu';
+import home from '../../asset/home.png';
+import { NavLink } from 'react-router-dom';
 
-export default function WebWork() {
+export default function Work() {
   const setVh = () => {
     document.documentElement.style.setProperty(
       '--vh',
@@ -41,7 +42,11 @@ export default function WebWork() {
 
   return (
     <div className='container workContainer'>
-      <Header />
+      <div className='homeBar'>
+        <NavLink to='/'>
+          <img src={home} alt='home' className='home' />
+        </NavLink>
+      </div>
       <WorkMenu />
       <section className='section webSection'>
         <div className='webList'>
