@@ -2,10 +2,10 @@
 
 .workContainer section {
   height: 100vh;
-  height: var(--vh);
+  // height: var(--vh);
   padding: toSize(160) toSize(390);
   display: grid;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .webList {
@@ -13,8 +13,8 @@
   grid-template-columns: toSize(140) toSize(845) toSize(140);
   grid-template-rows: toSize(70) auto;
   border-bottom: solid 1px #7a7a7a;
-  margin-top: toSize(20);
-  padding-bottom: toSize(40);
+  margin-top: toSize(30);
+  padding-bottom: toSize(30);
   cursor: pointer;
   transition: 0.3s color;
   h1 {
@@ -36,4 +36,31 @@
   &:hover {
     color: #4cafa9;
   }
+}
+
+.webList:hover::after {
+  content: '';
+  position: absolute;
+  top: var(--mouseY);
+  left: var(--mouseX);
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 5;
+  background-size: cover;
+}
+
+.webList:first-child::after {
+  background-image: url('../../../asset/mealsac_thumbnail.JPG');
+}
+.webList:nth-child(2)::after {
+  background-image: url('../../../asset/beatbay_thumbnail.JPG');
+}
+.webList:nth-child(3)::after {
+  background-color: #4cafa9;
+}
+.webList:nth-child(4)::after {
+  background-image: url('../../../asset/portfolio_thumbnail.JPG');
 }

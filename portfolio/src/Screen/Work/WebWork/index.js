@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './style.scss';
 import WorkMenu from '../../../components/WorkMenu/WorkMenu';
 import Header from '../../../components/Header/Header';
@@ -12,6 +12,26 @@ export default function WebWork() {
   };
   window.addEventListener('resize', setVh);
   setVh();
+
+  useEffect(() => {
+    const handleMouseMove = e => {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+      document.documentElement.style.setProperty('--mouseX', `${mouseX}px`);
+      document.documentElement.style.setProperty('--mouseY', `${mouseY}px`);
+    };
+
+    const webLists = document.querySelectorAll('.webList');
+    webLists.forEach(webList => {
+      webList.addEventListener('mousemove', handleMouseMove);
+    });
+
+    return () => {
+      webLists.forEach(webList => {
+        webList.removeEventListener('mousemove', handleMouseMove);
+      });
+    };
+  }, []);
 
   return (
     <div className='container workContainer'>
