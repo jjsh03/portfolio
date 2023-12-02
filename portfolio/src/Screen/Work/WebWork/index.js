@@ -17,8 +17,14 @@ export default function WebWork() {
     const handleMouseMove = e => {
       const mouseX = e.clientX;
       const mouseY = e.clientY;
-      document.documentElement.style.setProperty('--mouseX', `${mouseX}px`);
-      document.documentElement.style.setProperty('--mouseY', `${mouseY}px`);
+      document.documentElement.style.setProperty(
+        '--mouseX',
+        `${mouseX - 20}px`,
+      );
+      document.documentElement.style.setProperty(
+        '--mouseY',
+        `${mouseY - 20}px`,
+      );
     };
 
     const webLists = document.querySelectorAll('.webList');
