@@ -12,6 +12,7 @@ import partner from '../../asset/partner.gif';
 import planning from '../../asset/planning.gif';
 import trendy from '../../asset/trendy.gif';
 import letterDeco from '../../asset/letterdeco.svg';
+import { NavLink } from 'react-router-dom';
 
 export default function Main() {
   const [hoveredSpan, setHoveredSpan] = useState(null);
@@ -238,21 +239,27 @@ export default function Main() {
               ></img>
             </div>
             <div className='workBtns'>
-              <button>
-                {btnDeco}
-                web
-                {btnDeco}
-              </button>
-              <button>
-                {btnDeco}
-                design
-                {btnDeco}
-              </button>
-              <button>
-                {btnDeco}
-                others
-                {btnDeco}
-              </button>
+              <NavLink to='/work'>
+                <button>
+                  {btnDeco}
+                  web
+                  {btnDeco}
+                </button>
+              </NavLink>
+              <NavLink to='/work'>
+                <button>
+                  {btnDeco}
+                  design
+                  {btnDeco}
+                </button>
+              </NavLink>
+              <NavLink to='/work'>
+                <button>
+                  {btnDeco}
+                  others
+                  {btnDeco}
+                </button>
+              </NavLink>
             </div>
           </section>
         )}

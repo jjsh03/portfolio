@@ -15,6 +15,7 @@
     font-size: toSize(30);
     transition: 0.5s width;
     border: 0.5px solid #7a7a7a;
+    border-left: none;
     border-radius: 0 999px 999px 0;
     margin-bottom: toSize(20);
     padding-right: toSize(50);
