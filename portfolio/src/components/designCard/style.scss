@@ -1,0 +1,59 @@
+@import '../../config/globalStyles.scss';
+
+.designCard {
+  width: toSize(265);
+  margin-left: toSize(30);
+  white-space: nowrap;
+
+  .cardHover {
+    position: absolute;
+    z-index: 1;
+    font-family: 'LEMON MILK';
+    font-size: toSize(50);
+    width: toSize(265);
+    height: toSize(380);
+    clip-path: ellipse(50% 50% at 50% 50%);
+    background-color: transparent;
+    transition: background-color 0.5s ease, rotate 0.5s ease;
+    p {
+      rotate: 275deg;
+      margin-top: 60%;
+      text-align: center;
+      color: transparent;
+      transition: color 0.5s ease;
+    }
+  }
+  .cardImg {
+    width: toSize(265);
+    height: toSize(380);
+    object-fit: cover;
+    border-radius: toSize(20);
+    position: relative;
+    transition: clip-path 0.5s ease, rotate 0.5s ease;
+  }
+  .cardText {
+    color: #7a7a7a;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-size: toSize(20);
+    margin-top: toSize(20);
+    p {
+      margin: toSize(5);
+    }
+  }
+
+  &:hover {
+    .cardHover {
+      background-color: rgba(76, 175, 168, 0.628);
+      rotate: 30deg;
+      p {
+        color: white;
+      }
+    }
+    .cardImg {
+      clip-path: ellipse(50% 50% at 50% 50%);
+      rotate: 30deg;
+    }
+  }
+}

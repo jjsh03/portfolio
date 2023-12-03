@@ -1,0 +1,9 @@
+@import '../../config/globalStyles.scss';
+
+.designList {
+  padding: toSize(120) 0;
+  width: toSize(1300);
+  display: grid;
+  grid-auto-flow: column;
+  overflow: hidden;
+}

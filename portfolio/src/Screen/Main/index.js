@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import HeaderMenu from '../../components/Header/Header';
 import './IntroSection.scss';
 import './AboutSection.scss';
@@ -13,21 +13,11 @@ import planning from '../../asset/planning.gif';
 import trendy from '../../asset/trendy.gif';
 import letterDeco from '../../asset/letterdeco.svg';
 import { useNavigate } from 'react-router-dom';
-import {
-  // Header,
-  ScrollToTopOnMount,
-  Section,
-  SectionsContainer,
-} from 'react-fullpage';
+import { ScrollToTopOnMount, Section, SectionsContainer } from 'react-fullpage';
 
 export default function Main() {
   const [hoveredSpan, setHoveredSpan] = useState(null);
   const [hoverGif, setHoverGif] = useState(null);
-
-  useEffect(() => {
-    console.log(hoveredSpan);
-    console.log(hoverGif);
-  });
 
   const setVh = () => {
     document.documentElement.style.setProperty(

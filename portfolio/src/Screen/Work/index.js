@@ -21,32 +21,6 @@ export default function WorkWeb() {
   window.addEventListener('resize', setVh);
   setVh();
 
-  useEffect(() => {
-    const handleMouseMove = e => {
-      const mouseX = e.clientX;
-      const mouseY = e.clientY;
-      document.documentElement.style.setProperty(
-        '--mouseX',
-        `${mouseX - 20}px`,
-      );
-      document.documentElement.style.setProperty(
-        '--mouseY',
-        `${mouseY - 20}px`,
-      );
-    };
-
-    const webLists = document.querySelectorAll('.webList');
-    webLists.forEach(webList => {
-      webList.addEventListener('mousemove', handleMouseMove);
-    });
-
-    return () => {
-      webLists.forEach(webList => {
-        webList.removeEventListener('mousemove', handleMouseMove);
-      });
-    };
-  }, []);
-
   const [selectedMenu, setSelectedMenu] = useState('web');
 
   useEffect(() => {

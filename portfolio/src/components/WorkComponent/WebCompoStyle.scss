@@ -2,7 +2,7 @@
 
 .webList {
   display: grid;
-  grid-template-columns: toSize(140) toSize(845) toSize(140);
+  grid-template-columns: toSize(150) toSize(1000) toSize(150);
   grid-template-rows: toSize(70) auto;
   border-bottom: solid 1px #7a7a7a;
   margin-top: toSize(30);
