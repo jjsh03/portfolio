@@ -4,7 +4,9 @@
   z-index: 100;
   position: fixed;
   top: toSize(180);
-  button {
+  .webMenu,
+  .designMenu,
+  .othersMenu {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -25,7 +27,8 @@
       transition: display;
       margin-right: toSize(20);
     }
-    &:hover {
+    &:hover,
+    &.clicked {
       color: #4cafa9;
       border-color: white;
       width: toSize(300);
