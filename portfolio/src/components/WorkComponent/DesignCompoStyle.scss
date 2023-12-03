@@ -1,9 +1,11 @@
 @import '../../config/globalStyles.scss';
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
 
 .designList {
   padding: toSize(120) 0;
   width: toSize(1300);
-  display: grid;
-  grid-auto-flow: column;
-  overflow: hidden;
+  //   display: grid;
+  //   grid-auto-flow: column;
+  //   overflow: hidden;
 }

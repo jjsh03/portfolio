@@ -7,6 +7,7 @@ import artboard3 from '../../asset/artboard3.png';
 import artboard4 from '../../asset/poster1.png';
 import artboard5 from '../../asset/poster2.png';
 import artboard6 from '../../asset/poster3.png';
+import Slider from 'react-slick';
 
 export default function DesignCompo() {
   const artboards = [
@@ -47,12 +48,34 @@ export default function DesignCompo() {
       img: artboard6,
     },
   ];
+
+  const sliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+
+    // responsive: [
+    //   // 반응형 옵션
+    //   {
+    //     breakpoint: 780,
+    //     settings: {
+    //       slidesToShow: 2,
+    //       arrows: true,
+    //     },
+    //   },
+    // ],
+  };
+
   return (
     <section className='section designSection'>
       <div className='designList'>
-        {artboards.map(artboard => (
-          <DesignCard key={artboard.id} data={artboard} />
-        ))}
+        <Slider {...sliderSettings}>
+          {artboards.map(artboard => (
+            <DesignCard key={artboard.id} data={artboard} />
+          ))}
+        </Slider>
       </div>
     </section>
   );
