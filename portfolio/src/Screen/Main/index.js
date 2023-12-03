@@ -12,7 +12,7 @@ import partner from '../../asset/partner.gif';
 import planning from '../../asset/planning.gif';
 import trendy from '../../asset/trendy.gif';
 import letterDeco from '../../asset/letterdeco.svg';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {
   // Header,
   ScrollToTopOnMount,

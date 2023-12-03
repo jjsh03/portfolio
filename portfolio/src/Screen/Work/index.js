@@ -59,11 +59,6 @@ export default function WorkWeb() {
     }
   }, [location]);
 
-  const handleSelectMenu = menu => {
-    setSelectedMenu(menu);
-    navigate('/work', { state: { data: menu } });
-  };
-
   return (
     <div className='container workContainer'>
       <div className='homeBar'>
@@ -71,7 +66,7 @@ export default function WorkWeb() {
           <img src={home} alt='home' className='home' />
         </NavLink>
       </div>
-      <WorkMenu onSelectMenu={handleSelectMenu} selectedMenu />
+      <WorkMenu selectedMenu={selectedMenu} setSelectedMenu={setSelectedMenu} />
 
       {selectedMenu === 'web' && <WebCompo />}
       {selectedMenu === 'design' && <DesignCompo />}

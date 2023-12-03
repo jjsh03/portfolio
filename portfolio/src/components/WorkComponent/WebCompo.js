@@ -1,6 +1,34 @@
 import React from 'react';
+import './WebCompoStyle.scss';
+import { useEffect } from 'react';
 
 export default function WebCompo() {
+  useEffect(() => {
+    const handleMouseMove = e => {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+      document.documentElement.style.setProperty(
+        '--mouseX',
+        `${mouseX - 20}px`,
+      );
+      document.documentElement.style.setProperty(
+        '--mouseY',
+        `${mouseY - 20}px`,
+      );
+    };
+
+    const webLists = document.querySelectorAll('.webList');
+    webLists.forEach(webList => {
+      webList.addEventListener('mousemove', handleMouseMove);
+    });
+
+    return () => {
+      webLists.forEach(webList => {
+        webList.removeEventListener('mousemove', handleMouseMove);
+      });
+    };
+  }, []);
+
   return (
     <section className='section webSection'>
       <div className='webList'>

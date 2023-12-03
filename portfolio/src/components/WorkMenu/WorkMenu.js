@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './style.scss';
 
-export default function WorkMenu({ onSelectMenu }) {
+export default function WorkMenu({ selectedMenu, setSelectedMenu }) {
   const btnDeco = (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -18,29 +18,26 @@ export default function WorkMenu({ onSelectMenu }) {
     </svg>
   );
 
-  const [activeMenu, setActiveMenu] = useState('web');
-
   const handleMenuClick = menu => {
-    setActiveMenu(menu);
-    onSelectMenu(menu);
+    setSelectedMenu(menu);
   };
 
   return (
     <div className='workMenus'>
       <button
-        className={`webMenu ${activeMenu === 'web' ? 'clicked' : ''}`}
+        className={`webMenu ${selectedMenu === 'web' ? 'clicked' : ''}`}
         onClick={() => handleMenuClick('web')}
       >
         {btnDeco}web
       </button>
       <button
-        className={`designMenu ${activeMenu === 'design' ? 'clicked' : ''}`}
+        className={`designMenu ${selectedMenu === 'design' ? 'clicked' : ''}`}
         onClick={() => handleMenuClick('design')}
       >
         {btnDeco}design
       </button>
       <button
-        className={`othersMenu ${activeMenu === 'others' ? 'clicked' : ''}`}
+        className={`othersMenu ${selectedMenu === 'others' ? 'clicked' : ''}`}
         onClick={() => handleMenuClick('others')}
       >
         {btnDeco}others
