@@ -1,0 +1,40 @@
+@import '../../config/globalStyles.scss';
+
+.workMenus {
+  z-index: 100;
+  position: fixed;
+  top: toSize(180);
+  .webMenu,
+  .designMenu,
+  .othersMenu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: toSize(200);
+    height: toSize(66);
+    color: #7a7a7a;
+    font-family: 'crima';
+    font-size: toSize(30);
+    transition: 0.5s width;
+    border: 0.5px solid #7a7a7a;
+    border-left: none;
+    border-radius: 0 999px 999px 0;
+    margin-bottom: toSize(20);
+    padding-right: toSize(50);
+    cursor: pointer;
+    svg {
+      display: none;
+      transition: display;
+      margin-right: toSize(20);
+    }
+    &:hover,
+    &.clicked {
+      color: #4cafa9;
+      border-color: white;
+      width: toSize(300);
+      svg {
+        display: inline;
+      }
+    }
+  }
+}

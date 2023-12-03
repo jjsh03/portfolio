@@ -1,0 +1,58 @@
+@import '../../config/globalStyles.scss';
+
+.webList {
+  display: grid;
+  grid-template-columns: toSize(150) toSize(1000) toSize(150);
+  grid-template-rows: toSize(70) auto;
+  border-bottom: solid 1px #7a7a7a;
+  margin-top: toSize(30);
+  padding-bottom: toSize(30);
+  cursor: pointer;
+  transition: 0.3s color;
+  h1 {
+    font-family: 'PyeongChangPeace';
+    font-size: toSize(48);
+    margin: 0;
+  }
+  h1:first-child {
+    font-weight: 400;
+  }
+  p {
+    font-family: 'PyeongChang';
+    font-size: toSize(18);
+    margin: 0;
+  }
+  p:nth-of-type(2) {
+    grid-column: 2 / 3;
+  }
+  &:hover {
+    color: #4cafa9;
+  }
+}
+
+.webList:hover::after {
+  content: '';
+  position: absolute;
+  top: var(--mouseY);
+  left: var(--mouseX);
+  width: toSize(400);
+  height: toSize(200);
+  border-radius: 50%;
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 5;
+  background-size: cover;
+}
+
+.webList:first-child::after {
+  background-image: url('../../asset/mealsac_thumbnail.JPG');
+}
+.webList:nth-child(2)::after {
+  background-image: url('../../asset/beatbay_thumbnail.JPG');
+}
+.webList:nth-child(3)::after {
+  background-color: #4cafa9;
+}
+.webList:nth-child(4)::after {
+  background-image: url('../../asset/portfolio_thumbnail.JPG');
+}

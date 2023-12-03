@@ -79,9 +79,13 @@ $breakpoint-mobile: 768px;
     border: 0;
     background-color: transparent;
   }
+  a {
+    text-decoration: none;
+  }
 }
 body {
   margin: 0;
+  background-color: #0a0d0f;
 }
 :root {
   --vh: 100%;

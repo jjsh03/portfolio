@@ -1,0 +1,20 @@
+@import '../../config/globalStyles.scss';
+
+.workContainer section {
+  height: 100vh;
+  padding: toSize(160) toSize(230) toSize(160) toSize(390);
+  display: grid;
+}
+
+.homeBar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: toSize(30) toSize(70);
+  position: fixed;
+  z-index: 99;
+  .home {
+    width: toSize(60);
+    cursor: pointer;
+  }
+}
