@@ -1,0 +1,118 @@
+@import '../../config/globalStyles.scss';
+
+.backVideo {
+  width: 100%;
+  position: relative;
+  filter: brightness(50%);
+}
+
+.backPath {
+  background-image: url('../../asset/detaileclips.svg');
+  width: 100%;
+  height: toSize(2400);
+  position: absolute;
+  top: 0;
+  background-size: cover;
+  padding: 0 toSize(120);
+
+  .detailTitle {
+    width: 100%;
+    height: toSize(1080);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: toSize(-100);
+    img {
+      width: toSize(145);
+    }
+    h1 {
+      font-family: 'LEMON MILK';
+      font-size: toSize(100);
+      font-weight: 700;
+      margin: toSize(60) 0 toSize(35) 0;
+    }
+    p {
+      font-family: 'crima';
+      font-size: toSize(36);
+      margin: 0;
+    }
+  }
+
+  .moreInfoSection {
+    display: flex;
+    align-items: center;
+  }
+
+  .workInfo {
+    color: black;
+    margin-right: toSize(140);
+
+    & > div:first-child {
+      display: flex;
+      height: fit-content;
+      align-items: flex-end;
+      margin-bottom: toSize(60);
+
+      h1 {
+        font-family: 'LEMON MILK';
+        font-size: toSize(100);
+        font-weight: 700;
+        margin: 0;
+      }
+
+      p {
+        font-family: 'Pretendard';
+        font-size: toSize(26);
+        font-weight: 500;
+        margin-left: toSize(30);
+      }
+    }
+
+    .infoName {
+      font-size: toSize(30);
+      font-family: 'Pretendard';
+      font-weight: 700;
+      margin: toSize(50) 0 toSize(30) 0;
+    }
+
+    & > div > div > div {
+      font-family: 'Pretendard';
+      font-size: toSize(20);
+      display: flex;
+
+      p {
+        width: toSize(130);
+        height: toSize(35);
+        background-color: #d9d9d9;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 toSize(10);
+
+        &:hover {
+          background-color: #4cafa9;
+          color: white;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .workGif {
+    .imac {
+      width: toSize(830);
+      position: absolute;
+      z-index: 1;
+    }
+    .BEATBAYgif {
+      background-image: url('../../asset/beatbay_imac.gif');
+      background-size: cover;
+      width: toSize(830);
+      height: toSize(440);
+      position: relative;
+      margin-top: toSize(30);
+    }
+  }
+}

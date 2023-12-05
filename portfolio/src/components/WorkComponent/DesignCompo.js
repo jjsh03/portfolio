@@ -9,7 +9,6 @@ import artboard5 from '../../asset/poster2.png';
 import artboard6 from '../../asset/poster3.png';
 import prevIcon from '../../asset/prev.svg';
 import nextIcon from '../../asset/next.svg';
-import StyledSlider from 'react-slick';
 import Slider from 'react-slick';
 
 export default function DesignCompo() {
@@ -79,19 +78,19 @@ export default function DesignCompo() {
   const next = useCallback(() => slickRef.current.slickNext(), []);
 
   return (
-    <section className="section designSection">
-      <div className="prev" onClick={previous}>
-        <img src={prevIcon} alt="prev-arrow" />
+    <section className='section designSection'>
+      <div className='prev' onClick={previous}>
+        <img src={prevIcon} alt='prev-arrow' />
       </div>
-      <div className="designList">
+      <div className='designList'>
         <Slider {...sliderSettings} ref={slickRef}>
-          {artboards.map((artboard) => (
+          {artboards.map(artboard => (
             <DesignCard key={artboard.id} data={artboard} />
           ))}
         </Slider>
       </div>
-      <div className="next" onClick={next}>
-        <img src={nextIcon} alt="next-arrow" />
+      <div className='next' onClick={next}>
+        <img src={nextIcon} alt='next-arrow' />
       </div>
     </section>
   );

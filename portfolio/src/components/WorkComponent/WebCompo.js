@@ -1,6 +1,7 @@
 import React from 'react';
 import './WebCompoStyle.scss';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function WebCompo() {
   useEffect(() => {
@@ -29,9 +30,14 @@ export default function WebCompo() {
     };
   }, []);
 
+  const navigate = useNavigate();
+  const goToDetail = e => {
+    navigate(`/work/${e}`);
+  };
+
   return (
     <section className='section webSection'>
-      <div className='webList'>
+      <div className='webList' onClick={() => goToDetail(1)}>
         <h1>01</h1>
         <h1>MEALSAC</h1>
         <p>teamproject</p>
@@ -41,7 +47,8 @@ export default function WebCompo() {
           HTML, CSS, Javascript, BootStrap, EJS, axios, AOS, Figma, Git
         </p>
       </div>
-      <div className='webList'>
+
+      <div className='webList' onClick={() => goToDetail(2)}>
         <h1>02</h1>
         <h1>BEATBAY</h1>
         <p>teamproject</p>
@@ -50,7 +57,7 @@ export default function WebCompo() {
           HTML, CSS, JavaScript, Sass, React, Axios, AOS, Figma, Git{' '}
         </p>
       </div>
-      <div className='webList'>
+      <div className='webList' onClick={() => goToDetail(3)}>
         <h1>03</h1>
         <h1>SOMETHING</h1>
         <p>teamproject</p>
@@ -59,7 +66,7 @@ export default function WebCompo() {
           HTML, CSS, Javascript, ...
         </p>
       </div>
-      <div className='webList'>
+      <div className='webList' onClick={() => goToDetail(4)}>
         <h1>04</h1>
         <h1>PORTFOLIO</h1>
         <p>soloproject</p>

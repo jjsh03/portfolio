@@ -25,16 +25,6 @@
     }
   }
 
-  //   .LOCA div {
-  //     background-color: #787878;
-  //   }
-  //   .KMILK div {
-  //     background-color: #5185c3;
-  //   }
-  //   .칠성제로 div {
-  //     background-color: #7aa16c;
-  //   }
-
   .folderFront {
     position: absolute;
     width: toSize(240);
@@ -45,25 +35,7 @@
     flex-direction: column;
     justify-content: center;
     background-color: #659096;
-    p {
-      color: #fff;
-      text-align: center;
-      font-family: 'PyeongChang';
-      font-size: toSize(24);
-      font-weight: 700;
-      letter-spacing: toSize(-1.2);
-      margin: 0;
-    }
   }
-  //   .LOCAfront {
-  //     background-color: #bababa;
-  //   }
-  //   .KMILKfront {
-  //     background-color: #81b0e8;
-  //   }
-  //   .칠성제로front {
-  //     background-color: #b0ec9b;
-  //   }
 
   .folderThumbnail {
     width: toSize(220);
@@ -86,6 +58,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: toSize(10);
+  font-size: toSize(18);
   p {
     margin: 0;
     font-family: 'PyeongChang';
