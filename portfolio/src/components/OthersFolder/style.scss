@@ -1,0 +1,94 @@
+@import '../../config/globalStyles.scss';
+
+.otherFolder {
+  position: relative;
+  //   height: toSize(220);
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  cursor: pointer;
+
+  .folderBack {
+    position: relative;
+    div {
+      background-color: #455f62;
+    }
+    div:first-child {
+      width: toSize(120);
+      height: toSize(20);
+      border-radius: toSize(20) toSize(20) 0 0;
+    }
+    div:nth-child(2) {
+      width: toSize(240);
+      height: toSize(190);
+      border-radius: 0 toSize(20) toSize(20) toSize(20);
+    }
+  }
+
+  //   .LOCA div {
+  //     background-color: #787878;
+  //   }
+  //   .KMILK div {
+  //     background-color: #5185c3;
+  //   }
+  //   .칠성제로 div {
+  //     background-color: #7aa16c;
+  //   }
+
+  .folderFront {
+    position: absolute;
+    width: toSize(240);
+    height: toSize(150);
+    z-index: 2;
+    border-radius: toSize(20);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #659096;
+    p {
+      color: #fff;
+      text-align: center;
+      font-family: 'PyeongChang';
+      font-size: toSize(24);
+      font-weight: 700;
+      letter-spacing: toSize(-1.2);
+      margin: 0;
+    }
+  }
+  //   .LOCAfront {
+  //     background-color: #bababa;
+  //   }
+  //   .KMILKfront {
+  //     background-color: #81b0e8;
+  //   }
+  //   .칠성제로front {
+  //     background-color: #b0ec9b;
+  //   }
+
+  .folderThumbnail {
+    width: toSize(220);
+    z-index: 1;
+    position: absolute;
+    bottom: toSize(50);
+    transition: bottom 0.5s ease;
+    box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.34);
+  }
+
+  &:hover {
+    .folderThumbnail {
+      bottom: toSize(130);
+    }
+  }
+}
+
+.folderInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: toSize(10);
+  p {
+    margin: 0;
+    font-family: 'PyeongChang';
+    font-weight: 700;
+  }
+}

@@ -4,6 +4,8 @@
   width: toSize(265);
   margin-left: toSize(30);
   white-space: nowrap;
+  cursor: pointer;
+  position: relative;
 
   .cardHover {
     position: absolute;
@@ -34,10 +36,11 @@
   .cardText {
     color: #7a7a7a;
     text-align: center;
-    font-family: 'Pretendard';
+    font-family: 'PyeongChang';
     font-weight: 400;
     font-size: toSize(20);
     margin-top: toSize(20);
+    transition: color 0.5s ease, font-weight 0.5s ease;
     p {
       margin: toSize(5);
     }
@@ -45,7 +48,7 @@
 
   &:hover {
     .cardHover {
-      background-color: rgba(76, 175, 168, 0.628);
+      background-color: rgba(26, 81, 77, 0.628);
       rotate: 30deg;
       p {
         color: white;
@@ -54,6 +57,10 @@
     .cardImg {
       clip-path: ellipse(50% 50% at 50% 50%);
       rotate: 30deg;
+    }
+    .cardText {
+      color: #fff;
+      font-weight: 700;
     }
   }
 }

@@ -1,0 +1,6 @@
+@import '../../config/globalStyles.scss';
+
+.othersSection {
+  grid-template-columns: toSize(310) toSize(310) toSize(310) toSize(310);
+  justify-content: center;
+}
