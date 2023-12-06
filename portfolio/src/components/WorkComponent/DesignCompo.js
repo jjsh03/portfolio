@@ -10,6 +10,9 @@ import artboard6 from '../../asset/poster3.png';
 import prevIcon from '../../asset/prev.svg';
 import nextIcon from '../../asset/next.svg';
 import Slider from 'react-slick';
+import modal1 from '../../asset/beatbay_figma.png';
+import modal2 from '../../asset/mealsac_figma.png';
+import modal3 from '../../asset/portfolio_figma.png';
 
 export default function DesignCompo() {
   const artboards = [
@@ -18,36 +21,42 @@ export default function DesignCompo() {
       name: '비트베이',
       type: 'FIGMA',
       img: artboard1,
+      modal: modal1,
     },
     {
       id: 2,
       name: '밀싹',
       type: 'FIGMA',
       img: artboard2,
+      modal: modal2,
     },
     {
       id: 3,
       name: '포트폴리오',
       type: 'FIGMA',
       img: artboard3,
+      modal: modal3,
     },
     {
       id: 4,
       name: '틈',
       type: 'POSTER',
       img: artboard4,
+      modal: artboard4,
     },
     {
       id: 5,
       name: 'FASHION',
       type: 'POSTER',
       img: artboard5,
+      modal: artboard5,
     },
     {
       id: 6,
       name: 'SUMMER',
       type: 'POSTER',
       img: artboard6,
+      modal: artboard6,
     },
   ];
 
@@ -78,19 +87,19 @@ export default function DesignCompo() {
   const next = useCallback(() => slickRef.current.slickNext(), []);
 
   return (
-    <section className='section designSection'>
-      <div className='prev' onClick={previous}>
-        <img src={prevIcon} alt='prev-arrow' />
+    <section className="section designSection">
+      <div className="prev" onClick={previous}>
+        <img src={prevIcon} alt="prev-arrow" />
       </div>
-      <div className='designList'>
+      <div className="designList">
         <Slider {...sliderSettings} ref={slickRef}>
-          {artboards.map(artboard => (
+          {artboards.map((artboard) => (
             <DesignCard key={artboard.id} data={artboard} />
           ))}
         </Slider>
       </div>
-      <div className='next' onClick={next}>
-        <img src={nextIcon} alt='next-arrow' />
+      <div className="next" onClick={next}>
+        <img src={nextIcon} alt="next-arrow" />
       </div>
     </section>
   );

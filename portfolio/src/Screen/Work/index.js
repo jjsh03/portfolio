@@ -22,7 +22,7 @@ export default function WorkWeb() {
   window.addEventListener('resize', setVh);
   setVh();
 
-  const [selectedMenu, setSelectedMenu] = useState('web');
+  const [selectedMenu, setSelectedMenu] = useState('');
 
   useEffect(() => {
     console.log(location.state);
@@ -33,6 +33,7 @@ export default function WorkWeb() {
       console.log(selectedMenu);
     }
   }, [location]);
+  console.log(selectedMenu);
 
   return (
     <div className="container workContainer">

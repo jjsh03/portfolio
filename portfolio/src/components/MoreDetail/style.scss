@@ -1,0 +1,31 @@
+@import '../../config/globalStyles.scss';
+
+.moreDetailCard {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Pretendard';
+  align-items: center;
+  margin-bottom: toSize(150);
+  max-width: toSize(1250);
+
+  figure {
+    text-align: center;
+    img {
+      border-radius: toSize(20);
+      max-width: toSize(700);
+      max-height: toSize(420);
+      margin: toSize(10);
+    }
+  }
+
+  h3 {
+    margin: toSize(30) 0;
+    font-size: toSize(20);
+  }
+
+  p {
+    margin: 0 0 toSize(10) 0;
+    font-size: toSize(16);
+    width: toSize(900);
+  }
+}

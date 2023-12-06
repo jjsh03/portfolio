@@ -2,7 +2,7 @@
 
 .backVideo {
   width: 100%;
-  position: relative;
+  position: absolute;
   filter: brightness(50%);
 }
 
@@ -10,7 +10,7 @@
   background-image: url('../../asset/detaileclips.svg');
   width: 100%;
   height: toSize(2400);
-  position: absolute;
+  position: relative;
   top: 0;
   background-size: cover;
   padding: 0 toSize(120);
@@ -41,18 +41,14 @@
 
   .moreInfoSection {
     display: flex;
-    align-items: center;
-  }
-
-  .workInfo {
+    flex-direction: column;
+    width: 100%;
     color: black;
-    margin-right: toSize(140);
 
     & > div:first-child {
       display: flex;
       height: fit-content;
       align-items: flex-end;
-      margin-bottom: toSize(60);
 
       h1 {
         font-family: 'LEMON MILK';
@@ -69,11 +65,23 @@
       }
     }
 
+    & > div:nth-child(2) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .workInfo {
+    color: black;
+    margin-right: toSize(140);
+    width: toSize(680);
+    display: flex;
+
     .infoName {
-      font-size: toSize(30);
+      font-size: toSize(24);
       font-family: 'Pretendard';
       font-weight: 700;
-      margin: toSize(50) 0 toSize(30) 0;
+      margin: toSize(40) 0 toSize(20) 0;
     }
 
     & > div > div > div {
@@ -106,13 +114,54 @@
       position: absolute;
       z-index: 1;
     }
-    .BEATBAYgif {
-      background-image: url('../../asset/beatbay_imac.gif');
+    .imacGif {
       background-size: cover;
       width: toSize(830);
       height: toSize(440);
       position: relative;
       margin-top: toSize(30);
+    }
+    .BEATBAYgif {
+      background-image: url('../../asset/beatbay_imac.gif');
+    }
+    .MEALSACgif {
+      background-image: url('../../asset/mealsac_imac.gif');
+    }
+    .PORTFOLIOgif {
+      background-image: url('../../asset/portfolio_imac.gif');
+    }
+  }
+}
+
+.moreDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-family: 'LEMON MILK';
+    text-decoration: underline;
+    margin: toSize(160);
+    font-size: toSize(48);
+  }
+}
+
+.detailContainer footer {
+  height: toSize(300);
+  font-family: 'crima';
+  font-size: toSize(20);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a7a7a7;
+
+  p {
+    cursor: pointer;
+    width: toSize(200);
+    text-align: center;
+    height: toSize(150);
+
+    &:hover {
+      color: white;
     }
   }
 }
