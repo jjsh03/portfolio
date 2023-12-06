@@ -2,11 +2,20 @@ import React from 'react';
 import './style.scss';
 
 export default function MoreDetail({ data }) {
-  console.log(data);
-
   return (
     <div className="moreDetailCard">
-      <img src={data.img} alt="moreDetailImg" className="moreDetailImg" />
+      <figure>
+        {data.img &&
+          data.img.length > 0 &&
+          data.img.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt="moreDetailImg"
+              className="moreDetailImg"
+            />
+          ))}
+      </figure>
       <h3>{data.h}</h3>
       {data.t &&
         data.t.length > 0 &&

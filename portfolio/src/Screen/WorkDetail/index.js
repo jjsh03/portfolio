@@ -48,6 +48,45 @@ export default function WorkDetail() {
         </div>
       ),
       thumbnail: '/meal.mp4',
+
+      detail: [
+        {
+          img: [
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/fb48534f-1f4c-4de3-9e00-20be5b921079/Animation.gif?id=776cf3d4-97bb-40ed-bda4-3c929fc0d6ca&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=Pv-xrpEZpEaXu6jAo-yyHghHNKEDmXqITxbwFnkDfL4',
+          ],
+          h: '사이트 정체성에 알맞은 메인 페이지 구성 및 애니메이션 적용',
+          t: [
+            '식당 리스트 롤링 애니메이션 적용 → 호버 시 롤링 애니메이션 일시정지 및 크기를 확대하여 사용자 편리함을 증대',
+            'AOS를 활용한 스크롤시 페이드업 애니메이션 적용',
+            '로그인 상태에 따라 ʻ찜한 식당’이 보여지도록 구현',
+            '페이지를 이동하지 않고 메인페이지에서 메뉴 검색 가능 → 유저가 보는 간결한 URL과 데이터를 요청하는 API가 상이하여 새로운 EJS와 라우터를 생성하여 검색 페이지로 이동',
+          ],
+        },
+        {
+          img: [
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/6bb8e15c-9cae-4476-a304-14c543f5d801/Animation11.gif?id=54445137-b198-4a66-b46b-3f9b89ade56a&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=JTj7N-ya4Yf12mvQFTPQBXHH3p9heJ9ZI7XX-zK9VR4',
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/cd7056a3-3b5a-4724-9701-27336c1854d2/Animation12.gif?id=fc2a3965-d00d-4977-a795-bdcfc6be9681&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=M9Ozel-IN6zrlzY_EVv-ESvmhjNG4ErUQItyGZ5ihOE',
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/0b26cd30-5a30-4ff6-a492-c3fa81049bfb/Animation15.gif?id=bc4e6000-491f-410a-b4c6-d23ecd1bfbf2&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=aoIQ_5Gn5yd8cETP7S6RoJdcnd3BFCfcrK87wpqAs5g',
+          ],
+          h: '로그인, 회원가입, 회원 정보 수정 페이지 제작',
+          t: [
+            '보안 이슈를 최대한 줄이기 위해 사용자 회원 정보는 아이디, 닉네임, 비밀번호만 기입',
+            '아이디, 닉네임 중복 확인, 비밀번호 유효성 검사 후 가입 및 수정 가능',
+            '회원가입 후 로그인 또는 카카오톡을 이용해 로그인 가능',
+          ],
+        },
+        {
+          img: [
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/0d706d83-c29e-4605-8948-aa8397670101/Animation3.gif?id=1d2043b8-df84-4c6b-9f16-066d37806e7d&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=-RoRRm8M2ticpVrxt5erEQS_ZLMZHz1CZEef-4-o8hM',
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/14dc6781-d77e-46d0-b6b5-2f1d17739494/Animation4.gif?id=20da9a52-61f9-4685-86f1-f3a832723185&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=hpO_CnpIZbCZYk0dRAYB_uPED2ya7t9lH97YUB1cz0o',
+          ],
+          h: '마이페이지에서 자신의 데이터(찜, 리뷰, 글) 조회 및 수정 가능',
+          t: [
+            '보다 깔끔한 데이터 관리를 위하여 각 목록 버튼 클릭시 api 요청하여 데이터 조회',
+            '각 목록의 현재 페이지 상태를 전역변수로 관리, 목록이 바뀔 때 마다 페이지 상태 초기화 진행하여 페이지네이션 구현',
+          ],
+        },
+      ],
     };
   } else if (params.id == 2) {
     detailInfo = {
@@ -91,7 +130,9 @@ export default function WorkDetail() {
       thumbnail: '/vinyl.mp4',
       detail: [
         {
-          img: 'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/f3074320-fbb3-474c-b6d9-835f7b562967/Animation6.gif?id=10c6b494-bf4f-4beb-bf92-d3d621b5d6d2&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=-grnUECOXR9806bfvpXkQQEcIgydo9wo2Zre3JOzU8g',
+          img: [
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/f3074320-fbb3-474c-b6d9-835f7b562967/Animation6.gif?id=10c6b494-bf4f-4beb-bf92-d3d621b5d6d2&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=-grnUECOXR9806bfvpXkQQEcIgydo9wo2Zre3JOzU8g',
+          ],
           h: '거래 상품 등록 및 수정 페이지 제작',
           t: [
             '제목, 카테고리, 상품이미지, 가격, 설명, 상태, 거래방식, 지역 항목을 포함한 폼 제작',
@@ -99,7 +140,9 @@ export default function WorkDetail() {
           ],
         },
         {
-          img: 'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/9cc1402d-2235-416f-a286-2ff98de0f1c4/Animation3.gif?id=6b1fbed2-2927-4240-b67a-194b55542629&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=IlPKbypedwaqYWPLLdFufLqYhw5ao3luE8Y-qR0bjd4',
+          img: [
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/9cc1402d-2235-416f-a286-2ff98de0f1c4/Animation3.gif?id=6b1fbed2-2927-4240-b67a-194b55542629&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=IlPKbypedwaqYWPLLdFufLqYhw5ao3luE8Y-qR0bjd4',
+          ],
           h: '마이페이지 대시보드, 판매, 구매, 찜 페이지 구현',
           t: [
             '자신이 받은 후기와 팔로워, 팔로잉 목록을 모달로 조회 가능',
@@ -110,14 +153,18 @@ export default function WorkDetail() {
           ],
         },
         {
-          img: 'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/66271ff5-cd62-45d0-a583-4600dfe7ed97/Animation4.gif?id=3ea50c94-1246-4764-aad8-3461156ae62d&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=NjUeJgmUQMyS7fxFphDs1nrzFRI0LoS0_UIhbuaqUP0',
+          img: [
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/66271ff5-cd62-45d0-a583-4600dfe7ed97/Animation4.gif?id=3ea50c94-1246-4764-aad8-3461156ae62d&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=NjUeJgmUQMyS7fxFphDs1nrzFRI0LoS0_UIhbuaqUP0',
+          ],
           h: '자신 이외의 다른 유저 페이지(판매자 페이지) 제작',
           t: [
             '거래의 신뢰도를 높일 수 있도록 해당 유저가 받은 후기, 팔로워 모달 통해 확인 가능',
           ],
         },
         {
-          img: 'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/5b0c9e8d-90bc-459a-a345-677eecaa3160/Animation2.gif?id=05719e79-addb-4e2a-b7ee-6887e70635a6&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=hq0AeT3fI6d5Hk7XuiJEM89oNea49pcePerdeG7MKLs',
+          img: [
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/5b0c9e8d-90bc-459a-a345-677eecaa3160/Animation2.gif?id=05719e79-addb-4e2a-b7ee-6887e70635a6&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=hq0AeT3fI6d5Hk7XuiJEM89oNea49pcePerdeG7MKLs',
+          ],
           h: '공지사항, 칼럼 페이지 제작',
           t: [
             '관리자 이외의 사용자는 탭으로 나누어 공지사항, 칼럼 각각 조회 가능',
@@ -125,7 +172,9 @@ export default function WorkDetail() {
           ],
         },
         {
-          img: 'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/df8f95f3-3dee-42ed-ab9e-193766bf3b82/Animation5.gif?id=72f8516d-ddf8-4553-bd7d-34768de7aba1&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=xQegzZMkL65ZI_BezRtmPUnL-GKzEDcfYaCz_geGqok',
+          img: [
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/df8f95f3-3dee-42ed-ab9e-193766bf3b82/Animation5.gif?id=72f8516d-ddf8-4553-bd7d-34768de7aba1&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=xQegzZMkL65ZI_BezRtmPUnL-GKzEDcfYaCz_geGqok',
+          ],
           h: '유저, 칼럼 및 공지, 게시글 관리가 가능한 관리자 페이지 제작',
           t: [
             '전체 유저 조회 및 등급 조정, 삭제 가능',
@@ -187,7 +236,14 @@ export default function WorkDetail() {
       thumbnail: '/water.mp4',
     };
   }
-  console.log(detailInfo);
+
+  const backToTOP = () => {
+    window.scroll({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div className="container detailContainer">
       <video autoPlay loop muted playsInline className="backVideo">
@@ -199,7 +255,7 @@ export default function WorkDetail() {
           <h1>{detailInfo.name}</h1>
           <p>{detailInfo.type}</p>
         </section>
-        <section className="moreInfoSection">
+        <main className="moreInfoSection">
           <div>
             <h1>{detailInfo.name}</h1>
             <p>{detailInfo.team}</p>
@@ -256,7 +312,7 @@ export default function WorkDetail() {
               <div className={`imacGif ${detailInfo.name}gif`} />
             </div>
           </div>
-        </section>
+        </main>
       </div>
       <div className="moreDetail">
         <h1>DETAIL</h1>
@@ -266,6 +322,9 @@ export default function WorkDetail() {
             <MoreDetail key={index} data={detailItem} />
           ))}
       </div>
+      <footer>
+        <p onClick={backToTOP}>Back to top ⇧</p>
+      </footer>
     </div>
   );
 }

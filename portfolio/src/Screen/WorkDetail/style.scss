@@ -78,10 +78,10 @@
     display: flex;
 
     .infoName {
-      font-size: toSize(30);
+      font-size: toSize(24);
       font-family: 'Pretendard';
       font-weight: 700;
-      margin: toSize(50) 0 toSize(30) 0;
+      margin: toSize(40) 0 toSize(20) 0;
     }
 
     & > div > div > div {
@@ -142,5 +142,26 @@
     text-decoration: underline;
     margin: toSize(160);
     font-size: toSize(48);
+  }
+}
+
+.detailContainer footer {
+  height: toSize(300);
+  font-family: 'crima';
+  font-size: toSize(20);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a7a7a7;
+
+  p {
+    cursor: pointer;
+    width: toSize(200);
+    text-align: center;
+    height: toSize(150);
+
+    &:hover {
+      color: white;
+    }
   }
 }
