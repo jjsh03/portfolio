@@ -228,12 +228,34 @@ export default function WorkDetail() {
           <br />
           2. 이메일 API를 활용한 페이지에서 나에게 메일 발송 구현
           <br />
-          3. SEO
+          3. 버셀을 이용한 정적 배포
         </div>
       ),
       links: ['https://github.com/jjsh03/portfolio'],
-      tools: 'HTML, CSS, JavaScript, Sass, React, Axios, AOS, Figma, Git',
+      tools: 'HTML, CSS, JavaScript, Sass, React, AOS, Figma, Git',
       thumbnail: '/water.mp4',
+      detail: [
+        {
+          img: [
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/f3074320-fbb3-474c-b6d9-835f7b562967/Animation6.gif?id=10c6b494-bf4f-4beb-bf92-d3d621b5d6d2&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=dP256jrFxtkmY4v39k7amWLQ_eC3jMNtNVh1H8i0S_Q',
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/d084e230-1c61-4ac8-903b-f9fa7024a4ab/portfolio2.gif?id=be7078e3-49b3-4d78-90ec-2b0c6bb33552&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702065600000&signature=jYN1MhPMfjKeSpSjv21_3Mjy1YnHBZ8Td1aTYccEBEw',
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/18628c5a-2c58-4e68-beb6-422cceb66f9d/portfolio4.gif?id=7898df8a-bf82-4a75-b8e9-6007e2ee0c5b&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702065600000&signature=dQ41NSWmEE_tkILMBWbDnxorxcNK14mWL81IrtyOeCM',
+          ],
+          h: '감각적인 사용자 경험을 위한 인터랙티브 효과',
+          t: [
+            '커서의 이동, 클릭에 따른 파동 효과',
+            '풀페이지 스크롤을 통한 손쉬운 섹션 이동 → 모바일 상,하단바를 반영한 100vh설정이 따로 필요해 css property를 조작해서 제어',
+            '마우스가 움직일때 마다 x,y좌표값을 얻어 커서를 따라다니는 썸네일 제작',
+          ],
+        },
+        {
+          img: [
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/3ccc5880-a4bd-47f5-883d-117996bcf7c7/portfolio3.gif?id=b6128575-d313-45b8-90c6-6a22f291aa10&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702065600000&signature=RMvDcilebupRTVZAumzx_AbQOfySA8e1yy8H0GeC-4U',
+          ],
+          h: '페이지 이동 없이 이메일 발송',
+          t: ['emailJS를 사용하여 포트폴리오 사이트 내에서 바로 컨택이 가능'],
+        },
+      ],
     };
   }
 
