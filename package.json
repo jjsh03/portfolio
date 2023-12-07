@@ -23,8 +23,7 @@
     "sass": "^1.69.5",
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^11.10.1",
-    "web-vitals": "^2.1.4",
-    "homepage": "https://jjsh03.github.io/portfolio/"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
