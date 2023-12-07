@@ -52,7 +52,7 @@ export default function WorkDetail() {
       detail: [
         {
           img: [
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/fb48534f-1f4c-4de3-9e00-20be5b921079/Animation.gif?id=776cf3d4-97bb-40ed-bda4-3c929fc0d6ca&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=Pv-xrpEZpEaXu6jAo-yyHghHNKEDmXqITxbwFnkDfL4',
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/fb48534f-1f4c-4de3-9e00-20be5b921079/Animation.gif?id=776cf3d4-97bb-40ed-bda4-3c929fc0d6ca&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=2tUJY0No8TPd7Z1umKlM-2VqeQ3U5dT5uKRPxjwq0C8',
           ],
           h: '사이트 정체성에 알맞은 메인 페이지 구성 및 애니메이션 적용',
           t: [
@@ -64,9 +64,9 @@ export default function WorkDetail() {
         },
         {
           img: [
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/6bb8e15c-9cae-4476-a304-14c543f5d801/Animation11.gif?id=54445137-b198-4a66-b46b-3f9b89ade56a&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=JTj7N-ya4Yf12mvQFTPQBXHH3p9heJ9ZI7XX-zK9VR4',
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/cd7056a3-3b5a-4724-9701-27336c1854d2/Animation12.gif?id=fc2a3965-d00d-4977-a795-bdcfc6be9681&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=M9Ozel-IN6zrlzY_EVv-ESvmhjNG4ErUQItyGZ5ihOE',
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/0b26cd30-5a30-4ff6-a492-c3fa81049bfb/Animation15.gif?id=bc4e6000-491f-410a-b4c6-d23ecd1bfbf2&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=aoIQ_5Gn5yd8cETP7S6RoJdcnd3BFCfcrK87wpqAs5g',
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/6bb8e15c-9cae-4476-a304-14c543f5d801/Animation11.gif?id=54445137-b198-4a66-b46b-3f9b89ade56a&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=-jq48B3mYiNUcEJsh7ZVBCtGghMxDXOdNKCMMipYEqY',
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/cd7056a3-3b5a-4724-9701-27336c1854d2/Animation12.gif?id=fc2a3965-d00d-4977-a795-bdcfc6be9681&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=mO72ingnql74sPJEAqqcPDVWvDlHMYFiIPbZgEflUs0',
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/0b26cd30-5a30-4ff6-a492-c3fa81049bfb/Animation15.gif?id=bc4e6000-491f-410a-b4c6-d23ecd1bfbf2&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=QrvDzopQ9Zor2lgKVJM3tSat8yHwLo-HPjT5D-Opfok',
           ],
           h: '로그인, 회원가입, 회원 정보 수정 페이지 제작',
           t: [
@@ -77,8 +77,8 @@ export default function WorkDetail() {
         },
         {
           img: [
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/0d706d83-c29e-4605-8948-aa8397670101/Animation3.gif?id=1d2043b8-df84-4c6b-9f16-066d37806e7d&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=-RoRRm8M2ticpVrxt5erEQS_ZLMZHz1CZEef-4-o8hM',
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/14dc6781-d77e-46d0-b6b5-2f1d17739494/Animation4.gif?id=20da9a52-61f9-4685-86f1-f3a832723185&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=hpO_CnpIZbCZYk0dRAYB_uPED2ya7t9lH97YUB1cz0o',
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/0d706d83-c29e-4605-8948-aa8397670101/Animation3.gif?id=1d2043b8-df84-4c6b-9f16-066d37806e7d&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=Y_tZv9s3enFOajJRSsLL6zajp2JglDUbFhJ-eRBPHyI',
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/14dc6781-d77e-46d0-b6b5-2f1d17739494/Animation4.gif?id=20da9a52-61f9-4685-86f1-f3a832723185&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=Bu4fJm8SsYv-qR0sSdyx1tnMy5iaGRd1eBUIKMHJI5k',
           ],
           h: '마이페이지에서 자신의 데이터(찜, 리뷰, 글) 조회 및 수정 가능',
           t: [
@@ -131,7 +131,7 @@ export default function WorkDetail() {
       detail: [
         {
           img: [
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/f3074320-fbb3-474c-b6d9-835f7b562967/Animation6.gif?id=10c6b494-bf4f-4beb-bf92-d3d621b5d6d2&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=-grnUECOXR9806bfvpXkQQEcIgydo9wo2Zre3JOzU8g',
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/f3074320-fbb3-474c-b6d9-835f7b562967/Animation6.gif?id=10c6b494-bf4f-4beb-bf92-d3d621b5d6d2&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=dP256jrFxtkmY4v39k7amWLQ_eC3jMNtNVh1H8i0S_Q',
           ],
           h: '거래 상품 등록 및 수정 페이지 제작',
           t: [
@@ -141,7 +141,7 @@ export default function WorkDetail() {
         },
         {
           img: [
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/9cc1402d-2235-416f-a286-2ff98de0f1c4/Animation3.gif?id=6b1fbed2-2927-4240-b67a-194b55542629&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=IlPKbypedwaqYWPLLdFufLqYhw5ao3luE8Y-qR0bjd4',
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/9cc1402d-2235-416f-a286-2ff98de0f1c4/Animation3.gif?id=6b1fbed2-2927-4240-b67a-194b55542629&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=-rySy1Cc_T1Sxe4Lb_X6bX2_nUcLVmiN4DUns-xyJSM',
           ],
           h: '마이페이지 대시보드, 판매, 구매, 찜 페이지 구현',
           t: [
@@ -154,7 +154,7 @@ export default function WorkDetail() {
         },
         {
           img: [
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/66271ff5-cd62-45d0-a583-4600dfe7ed97/Animation4.gif?id=3ea50c94-1246-4764-aad8-3461156ae62d&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=NjUeJgmUQMyS7fxFphDs1nrzFRI0LoS0_UIhbuaqUP0',
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/66271ff5-cd62-45d0-a583-4600dfe7ed97/Animation4.gif?id=3ea50c94-1246-4764-aad8-3461156ae62d&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=tKkTuvon_2wpuwqZZ68xRT8Taaolg1QcXs_shSFvjkA',
           ],
           h: '자신 이외의 다른 유저 페이지(판매자 페이지) 제작',
           t: [
@@ -163,7 +163,7 @@ export default function WorkDetail() {
         },
         {
           img: [
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/5b0c9e8d-90bc-459a-a345-677eecaa3160/Animation2.gif?id=05719e79-addb-4e2a-b7ee-6887e70635a6&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=hq0AeT3fI6d5Hk7XuiJEM89oNea49pcePerdeG7MKLs',
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/5b0c9e8d-90bc-459a-a345-677eecaa3160/Animation2.gif?id=05719e79-addb-4e2a-b7ee-6887e70635a6&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=wN9rnbf2TblTsYY0fqAkS3iHcAo0GJlk2cIqW-vRhPw',
           ],
           h: '공지사항, 칼럼 페이지 제작',
           t: [
@@ -173,7 +173,7 @@ export default function WorkDetail() {
         },
         {
           img: [
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/df8f95f3-3dee-42ed-ab9e-193766bf3b82/Animation5.gif?id=72f8516d-ddf8-4553-bd7d-34768de7aba1&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1701928800000&signature=xQegzZMkL65ZI_BezRtmPUnL-GKzEDcfYaCz_geGqok',
+            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/df8f95f3-3dee-42ed-ab9e-193766bf3b82/Animation5.gif?id=72f8516d-ddf8-4553-bd7d-34768de7aba1&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=VHa7e6exNPQygy3TrOg5LS-HvHDYZkf5xgfx4No_HQ0',
           ],
           h: '유저, 칼럼 및 공지, 게시글 관리가 가능한 관리자 페이지 제작',
           t: [
@@ -245,49 +245,49 @@ export default function WorkDetail() {
   };
 
   return (
-    <div className="container detailContainer">
-      <video autoPlay loop muted playsInline className="backVideo">
-        <source src={detailInfo.thumbnail} type="video/mp4" />
+    <div className='container detailContainer'>
+      <video autoPlay loop muted playsInline className='backVideo'>
+        <source src={detailInfo.thumbnail} type='video/mp4' />
       </video>
-      <div className="backPath">
-        <section className="detailTitle">
-          <img src={detailIcon} alt="icon" className="detailIcon" />
+      <div className='backPath'>
+        <section className='detailTitle'>
+          <img src={detailIcon} alt='icon' className='detailIcon' />
           <h1>{detailInfo.name}</h1>
           <p>{detailInfo.type}</p>
         </section>
-        <main className="moreInfoSection">
+        <main className='moreInfoSection'>
           <div>
             <h1>{detailInfo.name}</h1>
             <p>{detailInfo.team}</p>
           </div>
           <div>
-            <div className="workInfo">
+            <div className='workInfo'>
               <div>
-                <div className="overview">
-                  <p className="infoName">OVERVIEW</p>
+                <div className='overview'>
+                  <p className='infoName'>OVERVIEW</p>
                   <div>{detailInfo.overview}</div>
                 </div>
-                <div className="date">
-                  <p className="infoName">DATE</p>
+                <div className='date'>
+                  <p className='infoName'>DATE</p>
                   <div>{detailInfo.date}</div>
                 </div>
                 {detailInfo.links && detailInfo.links.length > 0 && (
-                  <div className="Links">
-                    <p className="infoName">LINKS</p>
+                  <div className='Links'>
+                    <p className='infoName'>LINKS</p>
                     <div>
                       {detailInfo.links.length > 1 && (
                         <a
                           href={detailInfo.links[1]}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          target='_blank'
+                          rel='noopener noreferrer'
                         >
                           <p>배포</p>
                         </a>
                       )}
                       <a
                         href={detailInfo.links[0]}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        target='_blank'
+                        rel='noopener noreferrer'
                       >
                         <p>코드</p>
                       </a>
@@ -295,26 +295,26 @@ export default function WorkDetail() {
                   </div>
                 )}
 
-                <div className="tools">
-                  <p className="infoName">TOOLS</p>
+                <div className='tools'>
+                  <p className='infoName'>TOOLS</p>
                   <div>{detailInfo.tools}</div>
                 </div>
                 {detailInfo.role && (
-                  <div className="role">
-                    <p className="infoName">ROLE</p>
+                  <div className='role'>
+                    <p className='infoName'>ROLE</p>
                     <div>{detailInfo.role}</div>
                   </div>
                 )}
               </div>
             </div>
-            <div className="workGif">
-              <img src={imac} alt="imac" className="imac" />
+            <div className='workGif'>
+              <img src={imac} alt='imac' className='imac' />
               <div className={`imacGif ${detailInfo.name}gif`} />
             </div>
           </div>
         </main>
       </div>
-      <div className="moreDetail">
+      <div className='moreDetail'>
         <h1>DETAIL</h1>
         {detailInfo.detail &&
           detailInfo.detail.length > 0 &&
