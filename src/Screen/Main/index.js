@@ -199,11 +199,13 @@ export default function Main() {
                   </a>
                 </div>
                 <div className="introPics">
-                  <div className="waveImg" />
-                  <div className="twinkleProfile">
-                    <div className="profileImg" />
-                    <img src={star} alt="star" className="stars littleStar" />
-                    <img src={star} alt="star" className="stars bigStar" />
+                  <div>
+                    <div className="waveImg" />
+                    <div className="twinkleProfile">
+                      <div className="profileImg" />
+                      <img src={star} alt="star" className="stars littleStar" />
+                      <img src={star} alt="star" className="stars bigStar" />
+                    </div>
                   </div>
                 </div>
               </section>

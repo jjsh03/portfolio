@@ -1,25 +1,25 @@
 /*반응형 화면 크기*/
-$mobile: 481px;
+$mobile: 480px;
 $tablet: 768px;
 $desktop: 1280px;
 
-/*브라우저 크기가 480px 이하일때*/
+/* 브라우저 크기가 480px 이하일 때 */
 @mixin mobilePortrait {
-  @media (max-width: $mobile-1) {
+  @media (max-width: $mobile) {
     @content;
   }
 }
 
-/*브라우저 크기가 480이상, 768px 이하일때*/
+/* 브라우저 크기가 480 이상, 768px 이하일 때 */
 @mixin mobileLandscape {
-  @media (min-width: $mobile) and (max-width: $tablet-1) {
+  @media (min-width: $mobile) and (max-width: $tablet) {
     @content;
   }
 }
 
-/*브라우저 크기가 768 이상, 1280 이하일때*/
+/* 브라우저 크기가 768 이상, 1280 이하일 때 */
 @mixin tablet {
-  @media (min-width: $tablet) and (max-width: $desktop-1) {
+  @media (min-width: $tablet) and (max-width: $desktop) {
     @content;
   }
 }
@@ -31,6 +31,6 @@ $desktop: 1280px;
 }
 
 @function toSize($size) {
-  $calculatedSize: ($size / 1920) * 100;
-  @return #{$calculatedSize * 1vw};
+  $calculatedSize: ($size / 1920) * 100vw;
+  @return $calculatedSize;
 }
