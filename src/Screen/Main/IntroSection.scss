@@ -1,20 +1,19 @@
 @import '../../config/globalStyles.scss';
+@import '../../config/utils';
 
 .mainContainer section {
   height: 100vh;
   height: var(--vh);
   padding: toSize(100);
-  display: grid;
+  display: flex;
   overflow: hidden;
 }
 
-.introSection {
-  grid-template-columns: toSize(960) toSize(960);
-}
 .introText {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: toSize(960);
   .mainTitle {
     position: relative;
     margin-top: toSize(150);
@@ -53,17 +52,20 @@
   align-items: center;
   margin-top: toSize(100);
   position: relative;
+  width: toSize(960);
+  padding-left: 5%;
 
   .waveImg {
     background-image: url('../../asset/wave.png');
     background-size: cover;
     width: toSize(430);
     height: toSize(660);
-    position: relative;
-    bottom: toSize(70);
+    position: absolute;
+    // bottom: toSize(70);
   }
   .twinkleProfile {
-    position: relative;
+    position: absolute;
+    left: toSize(350);
     .profileImg {
       background-image: url('../../asset/profile.png');
       background-size: cover;
@@ -71,20 +73,20 @@
       height: toSize(660);
       z-index: 1;
       position: relative;
-      left: toSize(-150);
+      // left: toSize(-150);
     }
     .stars {
       position: absolute;
+      left: 70%;
     }
     .littleStar {
       width: toSize(50);
-      left: 35%;
       bottom: 90%;
       z-index: 2;
     }
     .bigStar {
       width: toSize(80);
-      left: 50%;
+      left: 85%;
       bottom: 75%;
       z-index: 2;
     }
@@ -118,5 +120,13 @@
       100% 100%,
       0% 100%
     );
+  }
+}
+
+@media (max-width: 768px) {
+  .MpContent {
+    flex-direction: column;
+    justify-content: center;
+    margin: -7vh 0 0 0;
   }
 }

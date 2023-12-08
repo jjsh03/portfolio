@@ -1,6 +1,5 @@
 @import '../../config/globalStyles.scss';
-// @import '~slick-carousel/slick/slick.css';
-// @import '~slick-carousel/slick/slick-theme.css';
+@import '../../config/utils';
 
 .designSection {
   grid-template-columns: toSize(50) toSize(1200) toSize(50);
