@@ -2,6 +2,14 @@
 @import '../../config/utils';
 
 .othersSection {
-  grid-template-columns: toSize(310) toSize(310) toSize(310) toSize(310);
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+  margin: auto;
+  padding: 10vw;
+  padding-right: 0;
+
+  & > div {
+    margin: 20px;
+  }
 }

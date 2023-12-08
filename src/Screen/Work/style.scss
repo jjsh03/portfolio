@@ -1,6 +1,7 @@
 @import '../../config/globalStyles.scss';
+@import '../../config/utils';
 
-.workContainer section {
+.workContainer section:not(.othersSection) {
   height: 100vh;
   padding: toSize(160) toSize(230) toSize(160) toSize(390);
   display: grid;
