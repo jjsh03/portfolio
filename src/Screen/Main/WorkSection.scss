@@ -60,4 +60,38 @@
       }
     }
   }
+
+  @include tablet {
+    .workTitle {
+      scale: 150%;
+    }
+    .workBtns {
+      scale: 150%;
+    }
+  }
+
+  @include mobileLandscape {
+    .workTitle {
+      scale: 150%;
+    }
+    .workBtns {
+      scale: 150%;
+    }
+  }
+
+  @include mobilePortrait {
+    .workTitle {
+      scale: 180%;
+    }
+    .workBtns {
+      scale: 200%;
+      flex-direction: column;
+      height: fit-content;
+      align-items: center;
+
+      button {
+        margin-top: 5%;
+      }
+    }
+  }
 }
