@@ -46,4 +46,28 @@
       }
     }
   }
+
+  @include tablet {
+    div {
+      scale: 120%;
+    }
+  }
+  @include mobileLandscape {
+    top: auto;
+    bottom: 0;
+    align-items: flex-start;
+    height: 5vh;
+    div {
+      scale: 150%;
+    }
+  }
+  @include mobilePortrait {
+    top: auto;
+    bottom: 0;
+    align-items: flex-start;
+    height: 5vh;
+    div {
+      scale: 180%;
+    }
+  }
 }

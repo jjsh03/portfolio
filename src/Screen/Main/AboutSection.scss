@@ -45,7 +45,8 @@
       text-decoration-line: underline;
       font-weight: 700;
       transition: color 0.3s ease;
-      &:hover {
+      &:hover,
+      &:checked {
         color: #5ca79c;
       }
     }
