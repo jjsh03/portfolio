@@ -1,7 +1,8 @@
 @import "../../config/globalStyles.scss";
 @import "../../config/utils";
 
-.workContainer section:not(.othersSection) {
+.webSection,
+.designSection {
   height: 100vh;
   padding: toSize(160) toSize(230) toSize(160) toSize(390);
   display: grid;
@@ -24,6 +25,10 @@
 }
 
 @mixin workMedia {
+  .workContainer .webSection {
+    height: fit-content;
+    padding: 10vh 10vw;
+  }
   .workMenus {
     display: none;
   }

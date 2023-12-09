@@ -1,26 +1,25 @@
-@import '../../config/globalStyles.scss';
-@import '../../config/utils';
+@import "../../config/globalStyles.scss";
+@import "../../config/utils";
 
 .webList {
   display: grid;
   grid-template-columns: toSize(150) toSize(1000) toSize(150);
-  grid-template-rows: toSize(70) auto;
   border-bottom: solid 1px #7a7a7a;
-  margin-top: toSize(30);
-  padding-bottom: toSize(30);
+  margin-top: 3vh;
+  padding-bottom: 3vh;
   cursor: pointer;
   transition: 0.3s color;
   h1 {
-    font-family: 'PyeongChangPeace';
-    font-size: toSize(48);
+    font-family: "PyeongChangPeace";
+    font-size: 2em;
     margin: 0;
   }
   h1:first-child {
     font-weight: 400;
   }
   p {
-    font-family: 'PyeongChang';
-    font-size: toSize(18);
+    font-family: "PyeongChang";
+    font-size: 1em;
     margin: 0;
   }
   p:nth-of-type(2) {
@@ -32,7 +31,7 @@
 }
 
 .webList:hover::after {
-  content: '';
+  content: "";
   position: absolute;
   top: var(--mouseY);
   left: var(--mouseX);
@@ -46,14 +45,38 @@
 }
 
 .webList:first-child::after {
-  background-image: url('../../asset/mealsac_thumbnail.JPG');
+  background-image: url("../../asset/mealsac_thumbnail.JPG");
 }
 .webList:nth-child(2)::after {
-  background-image: url('../../asset/beatbay_thumbnail.JPG');
+  background-image: url("../../asset/beatbay_thumbnail.JPG");
 }
 .webList:nth-child(3)::after {
   background-color: #4cafa9;
 }
 .webList:nth-child(4)::after {
-  background-image: url('../../asset/portfolio_thumbnail.JPG');
+  background-image: url("../../asset/portfolio_thumbnail.JPG");
+}
+
+@mixin webCompoMedia {
+  .webList {
+    grid-template-columns: 12vw auto;
+    .listTeam {
+      display: none;
+    }
+    p:nth-of-type(2) {
+      grid-column: 2 / 3;
+    }
+  }
+}
+
+@include tablet {
+  @include webCompoMedia;
+}
+
+@include mobileLandscape {
+  @include webCompoMedia;
+}
+
+@include mobilePortrait {
+  @include webCompoMedia;
 }
