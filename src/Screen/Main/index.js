@@ -1,34 +1,46 @@
-import React, { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import HeaderMenu from '../../components/Header/Header';
-import './IntroSection.scss';
-import './AboutSection.scss';
-import './WorkSection.scss';
-import './ContactSection.scss';
-import star from '../../asset/star.svg';
-import WaterWave from 'react-water-wave';
-import communicate from '../../asset/communicate.gif';
-import levelup from '../../asset/levelup.gif';
-import partner from '../../asset/partner.gif';
-import planning from '../../asset/planning.gif';
-import trendy from '../../asset/trendy.gif';
-import letterDeco from '../../asset/letterdeco.svg';
-import { useNavigate } from 'react-router-dom';
-import { ScrollToTopOnMount, Section, SectionsContainer } from 'react-fullpage';
-import Swal from 'sweetalert2';
-import { event } from 'jquery';
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import HeaderMenu from "../../components/Header/Header";
+import "./IntroSection.scss";
+import "./AboutSection.scss";
+import "./WorkSection.scss";
+import "./ContactSection.scss";
+import star from "../../asset/star.svg";
+import WaterWave from "react-water-wave";
+import communicate from "../../asset/communicate.gif";
+import levelup from "../../asset/levelup.gif";
+import partner from "../../asset/partner.gif";
+import planning from "../../asset/planning.gif";
+import trendy from "../../asset/trendy.gif";
+import letterDeco from "../../asset/letterdeco.svg";
+import { useNavigate } from "react-router-dom";
+import { ScrollToTopOnMount, Section, SectionsContainer } from "react-fullpage";
+import Swal from "sweetalert2";
+import { event } from "jquery";
 
 export default function Main() {
   const [hoveredSpan, setHoveredSpan] = useState(null);
   const [hoverGif, setHoverGif] = useState(null);
 
+  const handleSpanHover = (spanKey, gif) => {
+    setHoveredSpan(spanKey);
+    setHoverGif(gif);
+  };
+
+  const handleSpanClick = (spanKey, gif) => {
+    setHoveredSpan(null);
+    setHoverGif(null);
+    setHoveredSpan(spanKey);
+    setHoverGif(gif);
+  };
+
   const setVh = () => {
     document.documentElement.style.setProperty(
-      '--vh',
+      "--vh",
       `${window.innerHeight}px`
     );
   };
-  window.addEventListener('resize', setVh);
+  window.addEventListener("resize", setVh);
   setVh();
 
   const btnDeco = (
@@ -62,7 +74,7 @@ export default function Main() {
   );
 
   let options = {
-    anchors: ['intro', 'about', 'work', 'contact'],
+    anchors: ["intro", "about", "work", "contact"],
     navigation: false,
     delay: 700,
   };
@@ -75,29 +87,29 @@ export default function Main() {
     e.preventDefault();
     emailjs
       .sendForm(
-        'sage_0801',
-        'template_awj6ydd',
+        "sage_0801",
+        "template_awj6ydd",
         form.current,
-        '6Qyj1gc3dsDx0gg1S'
+        "6Qyj1gc3dsDx0gg1S"
       )
       .then(
         (result) => {
           console.log(result.text);
           Swal.fire({
-            title: '📬',
-            text: '연락해주셔서 감사합니다!',
-            icon: 'success',
-            confirmButtonText: '확인',
+            title: "📬",
+            text: "연락해주셔서 감사합니다!",
+            icon: "success",
+            confirmButtonText: "확인",
           });
           form.current.reset();
         },
         (error) => {
           console.log(error.text);
           Swal.fire({
-            title: '😥',
-            text: '메시지 전송에 실패했습니다',
-            icon: 'warning',
-            confirmButtonText: '확인',
+            title: "😥",
+            text: "메시지 전송에 실패했습니다",
+            icon: "warning",
+            confirmButtonText: "확인",
           });
         }
       );
@@ -105,7 +117,7 @@ export default function Main() {
 
   const Toast = Swal.mixin({
     toast: true,
-    position: 'top-end',
+    position: "top-end",
     showConfirmButton: false,
     timer: 3000,
     timerProgressBar: false,
@@ -117,7 +129,7 @@ export default function Main() {
 
   const clickContact = (e) => {
     const url = e.currentTarget.textContent;
-    window.open(url, '_blank');
+    window.open(url, "_blank");
   };
 
   const handleCopy = (event) => {
@@ -125,19 +137,19 @@ export default function Main() {
     navigator.clipboard
       .writeText(textToCopy)
       .then(() => {
-        console.log('Text copied to clipboard:', textToCopy);
+        console.log("Text copied to clipboard:", textToCopy);
         Toast.fire({
-          icon: 'success',
-          title: '전화번호가 복사되었습니다!',
+          icon: "success",
+          title: "전화번호가 복사되었습니다!",
         });
       })
       .catch((error) => {
-        console.error('Unable to copy text to clipboard', error);
+        console.error("Unable to copy text to clipboard", error);
       });
   };
 
   const handleEmail = () => {
-    window.location.href = 'mailto:jshyeon@naver.com';
+    window.location.href = "mailto:jshyeon@naver.com";
   };
 
   return (
@@ -219,16 +231,16 @@ export default function Main() {
               <div className="aboutText">
                 <p className="aboutOverviewTitle">Overview</p>
                 <p className="overviewContent">
-                  도전적인 목표를 두고{' '}
+                  도전적인 목표를 두고{" "}
                   <span
                     onMouseEnter={() => {
-                      setHoveredSpan('span1');
-                      setHoverGif(planning);
+                      handleSpanHover("span1", planning);
                     }}
                     onMouseLeave={() => {
                       setHoveredSpan(null);
                       setHoverGif(null);
                     }}
+                    onClick={() => handleSpanClick("span1", planning)}
                   >
                     계획을 수립
                   </span>
@@ -236,54 +248,54 @@ export default function Main() {
                   <br />
                   <span
                     onMouseEnter={() => {
-                      setHoveredSpan('span2');
-                      setHoverGif(communicate);
+                      handleSpanHover("span2", communicate);
                     }}
                     onMouseLeave={() => {
                       setHoveredSpan(null);
                       setHoverGif(null);
                     }}
+                    onClick={() => handleSpanClick("span2", communicate)}
                   >
                     뛰어난 커뮤니케이션 능력
                   </span>
-                  으로 PR 회사에 재직하는 중 클라이언트에게{' '}
+                  으로 PR 회사에 재직하는 중 클라이언트에게{" "}
                   <span
                     onMouseEnter={() => {
-                      setHoveredSpan('span3');
-                      setHoverGif(partner);
+                      handleSpanHover("span3", partner);
                     }}
                     onMouseLeave={() => {
                       setHoveredSpan(null);
                       setHoverGif(null);
                     }}
+                    onClick={() => handleSpanClick("span3", partner)}
                   >
                     “언제나 최고의 파트너”
                   </span>
                   라는 평을 들었습니다. <br />
-                  좋아하는 것에 몰두하는 소위 ʻ오타쿠’적 면모가 있어{' '}
+                  좋아하는 것에 몰두하는 소위 ʻ오타쿠’적 면모가 있어{" "}
                   <span
                     onMouseEnter={() => {
-                      setHoveredSpan('span4');
-                      setHoverGif(levelup);
+                      handleSpanHover("span4", levelup);
                     }}
                     onMouseLeave={() => {
                       setHoveredSpan(null);
                       setHoverGif(null);
                     }}
+                    onClick={() => handleSpanClick("span4", levelup)}
                   >
                     배움에 빠른 성장 속도
                   </span>
                   를 보여줍니다. <br />
-                  사용자의 눈과 마음을 사로 잡는{' '}
+                  사용자의 눈과 마음을 사로 잡는{" "}
                   <span
                     onMouseEnter={() => {
-                      setHoveredSpan('span5');
-                      setHoverGif(trendy);
+                      handleSpanHover("span5", trendy);
                     }}
                     onMouseLeave={() => {
                       setHoveredSpan(null);
                       setHoverGif(null);
                     }}
+                    onClick={() => handleSpanClick("span5", trendy)}
                   >
                     효율적이면서 트렌디한 디자인
                   </span>
@@ -308,7 +320,7 @@ export default function Main() {
                   className="aboutGif"
                   style={{
                     backgroundImage: `url(${hoverGif})`,
-                    backgroundSize: 'cover',
+                    backgroundSize: "cover",
                   }}
                 />
               </div>
@@ -331,7 +343,7 @@ export default function Main() {
                 <div className="workBtns">
                   <button
                     onClick={() =>
-                      navigate('/work', { replace: false, state: 'web' })
+                      navigate("/work", { replace: false, state: "web" })
                     }
                   >
                     {btnDeco}
@@ -340,7 +352,7 @@ export default function Main() {
                   </button>
                   <button
                     onClick={() =>
-                      navigate('/work', { replace: false, state: 'design' })
+                      navigate("/work", { replace: false, state: "design" })
                     }
                   >
                     {btnDeco}
@@ -349,7 +361,7 @@ export default function Main() {
                   </button>
                   <button
                     onClick={() =>
-                      navigate('/work', { replace: false, state: 'others' })
+                      navigate("/work", { replace: false, state: "others" })
                     }
                   >
                     {btnDeco}
@@ -370,25 +382,25 @@ export default function Main() {
                   <table className="contactTable">
                     <tr>
                       <td>PHONE.</td>
-                      <td onClick={handleCopy} style={{ cursor: 'pointer' }}>
+                      <td onClick={handleCopy} style={{ cursor: "pointer" }}>
                         +82 10-6763-6416
                       </td>
                     </tr>
                     <tr>
                       <td>EMAIL</td>
-                      <td onClick={handleEmail} style={{ cursor: 'pointer' }}>
+                      <td onClick={handleEmail} style={{ cursor: "pointer" }}>
                         jshyeon@naver.com
                       </td>
                     </tr>
                     <tr>
                       <td>GITHUB</td>
-                      <td onClick={clickContact} style={{ cursor: 'pointer' }}>
+                      <td onClick={clickContact} style={{ cursor: "pointer" }}>
                         https://github.com/jjsh03
                       </td>
                     </tr>
                     <tr>
                       <td>BLOG</td>
-                      <td onClick={clickContact} style={{ cursor: 'pointer' }}>
+                      <td onClick={clickContact} style={{ cursor: "pointer" }}>
                         https://code-sage.tistory.com
                       </td>
                     </tr>
