@@ -1,5 +1,5 @@
-@import '../../config/globalStyles.scss';
-@import '../../config/utils';
+@import "../../config/globalStyles.scss";
+@import "../../config/utils";
 
 .othersSection {
   display: flex;
@@ -10,6 +10,24 @@
   padding-right: 0;
 
   & > div {
-    margin: 20px;
+    padding: 20px;
   }
+}
+
+@mixin otherMedia {
+  .othersSection {
+    width: 100vw;
+  }
+}
+
+@include tablet {
+  @include otherMedia;
+}
+
+@include mobileLandscape {
+  @include otherMedia;
+}
+
+@include mobilePortrait {
+  @include otherMedia;
 }

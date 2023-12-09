@@ -25,7 +25,8 @@
 }
 
 @mixin workMedia {
-  .workContainer .webSection {
+  .workContainer .webSection,
+  .workContainer .othersSection {
     height: fit-content;
     padding: 10vh 10vw;
   }

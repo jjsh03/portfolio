@@ -1,5 +1,5 @@
-@import '../../config/globalStyles.scss';
-@import '../../config/utils';
+@import "../../config/globalStyles.scss";
+@import "../../config/utils";
 
 .otherFolder {
   position: relative;
@@ -14,21 +14,21 @@
       background-color: #455f62;
     }
     div:first-child {
-      width: 120px;
-      height: 20px;
+      width: toSize(120);
+      height: toSize(20);
       border-radius: toSize(20) toSize(20) 0 0;
     }
     div:nth-child(2) {
-      width: 240px;
-      height: 190px;
+      width: toSize(240);
+      height: toSize(190);
       border-radius: 0 toSize(20) toSize(20) toSize(20);
     }
   }
 
   .folderFront {
     position: absolute;
-    width: 240px;
-    height: 150px;
+    width: toSize(240);
+    height: toSize(150);
     z-index: 2;
     border-radius: toSize(20);
     display: flex;
@@ -38,17 +38,17 @@
   }
 
   .folderThumbnail {
-    width: 220px;
+    width: toSize(220);
     z-index: 1;
     position: absolute;
-    bottom: 50px;
+    bottom: toSize(50);
     transition: bottom 0.5s ease;
     box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.34);
   }
 
   &:hover {
     .folderThumbnail {
-      bottom: 130px;
+      bottom: toSize(130);
     }
   }
 }
@@ -58,10 +58,103 @@
   flex-direction: column;
   align-items: center;
   margin: 10px 0 30px 0;
-  font-size: 18px;
+  font-size: 0.8em;
   p {
     margin: 0;
-    font-family: 'PyeongChang';
+    font-family: "PyeongChang";
     font-weight: 700;
+  }
+}
+
+@include tablet {
+  .otherFolder {
+    .folderBack {
+      div:first-child {
+        width: toSize(200);
+        height: toSize(30);
+      }
+      div:nth-child(2) {
+        width: toSize(400);
+        height: toSize(350);
+      }
+    }
+
+    .folderFront {
+      width: toSize(400);
+      height: toSize(250);
+    }
+
+    .folderThumbnail {
+      width: toSize(360);
+      bottom: toSize(120);
+    }
+
+    &:hover {
+      .folderThumbnail {
+        bottom: toSize(250);
+      }
+    }
+  }
+}
+
+@include mobileLandscape {
+  .otherFolder {
+    .folderBack {
+      div:first-child {
+        width: toSize(250);
+        height: toSize(40);
+      }
+      div:nth-child(2) {
+        width: toSize(500);
+        height: toSize(380);
+      }
+    }
+
+    .folderFront {
+      width: toSize(500);
+      height: toSize(280);
+    }
+
+    .folderThumbnail {
+      width: toSize(440);
+      bottom: toSize(100);
+    }
+
+    &:hover {
+      .folderThumbnail {
+        bottom: toSize(280);
+      }
+    }
+  }
+}
+
+@include mobilePortrait {
+  .otherFolder {
+    .folderBack {
+      div:first-child {
+        width: toSize(250);
+        height: toSize(40);
+      }
+      div:nth-child(2) {
+        width: toSize(500);
+        height: toSize(380);
+      }
+    }
+
+    .folderFront {
+      width: toSize(500);
+      height: toSize(280);
+    }
+
+    .folderThumbnail {
+      width: toSize(440);
+      bottom: toSize(100);
+    }
+
+    &:hover {
+      .folderThumbnail {
+        bottom: toSize(280);
+      }
+    }
   }
 }
