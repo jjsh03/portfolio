@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Modal from 'react-modal';
-import './style.scss';
+import React, { useState } from "react";
+import Modal from "react-modal";
+import "./style.scss";
 
 export default function DesignCard({ data }) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -32,9 +32,9 @@ export default function DesignCard({ data }) {
         onRequestClose={closeModal}
         contentLabel="Webview Modal"
         className={{
-          base: 'modal-enter-animation',
-          afterOpen: 'modal-entered',
-          beforeClose: '',
+          base: "modal-enter-animation",
+          afterOpen: "modal-entered",
+          beforeClose: "",
         }}
         overlayClassName="overlay"
       >
@@ -44,6 +44,7 @@ export default function DesignCard({ data }) {
             width="100%"
             height="100%"
             className="modalImg"
+            alt="modalImg"
           />
           <button className="modalCloseButton" onClick={closeModal}>
             CLOSE

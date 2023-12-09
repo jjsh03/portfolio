@@ -1,5 +1,5 @@
-@import '../../config/globalStyles.scss';
-@import '../../config/utils';
+@import "../../config/globalStyles.scss";
+@import "../../config/utils";
 
 .designSection {
   grid-template-columns: toSize(50) toSize(1200) toSize(50);
@@ -19,4 +19,35 @@
     width: toSize(20);
     margin-bottom: toSize(70);
   }
+}
+
+@mixin designMedia {
+  .designSection {
+    grid-template-columns: 5vw 80vw 5vw;
+    padding: 10vh 5vw;
+  }
+
+  .designList {
+    padding: toSize(120) 0;
+    width: 90%;
+  }
+
+  .prev,
+  .next {
+    img {
+      width: 80%;
+    }
+  }
+}
+
+@include tablet {
+  @include designMedia;
+}
+
+@include mobileLandscape {
+  @include designMedia;
+}
+
+@include mobilePortrait {
+  @include designMedia;
 }
