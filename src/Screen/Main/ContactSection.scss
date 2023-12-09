@@ -1,15 +1,15 @@
-@import '../../config/globalStyles.scss';
-@import '../../config/utils';
+@import "../../config/globalStyles.scss";
+@import "../../config/utils";
 
 .mainContainer .contactSection {
   padding-top: 0;
   grid-template-columns: toSize(760) toSize(960);
-  grid-template-rows: toSize(700) auto;
+  grid-template-rows: 70vh auto;
   grid-auto-flow: dense;
   align-items: flex-end;
   .contactTable {
     margin-top: toSize(50);
-    font-family: 'Pretendard';
+    font-family: "Pretendard";
     font-weight: 700;
     font-size: toSize(22);
     tr {
@@ -30,7 +30,7 @@
       background-color: transparent;
       outline: none;
       height: toSize(70);
-      font-family: 'Pretendard';
+      font-family: "Pretendard";
       font-size: toSize(24);
       border-radius: toSize(20);
       padding: 0 toSize(20);
@@ -41,7 +41,7 @@
       background-color: transparent;
       outline: none;
       height: toSize(260);
-      font-family: 'Pretendard';
+      font-family: "Pretendard";
       font-size: toSize(24);
       overflow: hidden;
       resize: none;
@@ -54,7 +54,7 @@
       background-color: #5ca79c;
       border-radius: toSize(20);
       color: white;
-      font-family: 'Pretendard';
+      font-family: "Pretendard";
       font-weight: 700;
       font-size: toSize(28);
       cursor: pointer;
@@ -62,12 +62,67 @@
   }
   .touch {
     grid-column: 1 / 3;
-    font-family: 'LEMON MILK';
+    font-family: "LEMON MILK";
     font-size: toSize(250);
     font-weight: 700;
     text-wrap: nowrap;
     -webkit-text-stroke: 2px #5ca79c;
     color: transparent;
     margin-left: toSize(-100);
+  }
+
+  @mixin contactMedia {
+    justify-items: center;
+    width: 100%;
+    .contactText {
+      grid-column: 1/3;
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      svg {
+        width: 12%;
+      }
+      .contactTable {
+        margin: 0;
+        font-size: 1.8vw;
+      }
+    }
+    .contactForm {
+      grid-column: 1/3;
+      height: 90%;
+      width: 80%;
+      input {
+        height: 6vh;
+        font-size: 1.8vw;
+      }
+      .urContent {
+        height: 22vh;
+        font-size: 1.8vw;
+      }
+    }
+    .touch {
+      margin-left: 0;
+    }
+  }
+
+  @include tablet {
+    grid-template-rows: 25vh 50vh auto;
+    @include contactMedia;
+  }
+
+  @include mobileLandscape {
+    grid-template-rows: 20vh 50vh auto;
+    @include contactMedia;
+    .touch {
+      margin-bottom: 3vh;
+    }
+  }
+
+  @include mobilePortrait {
+    grid-template-rows: 20vh 50vh auto;
+    @include contactMedia;
+    .touch {
+      margin-bottom: 3vh;
+    }
   }
 }
