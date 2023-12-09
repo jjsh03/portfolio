@@ -1,5 +1,5 @@
-@import '../../config/globalStyles.scss';
-@import '../../config/utils';
+@import "../../config/globalStyles.scss";
+@import "../../config/utils";
 
 .workContainer section:not(.othersSection) {
   height: 100vh;
@@ -14,8 +14,72 @@
   padding: toSize(30) toSize(70);
   position: fixed;
   z-index: 99;
+  button {
+    display: none;
+  }
   .home {
-    width: toSize(60);
+    width: 5vw;
     cursor: pointer;
   }
+}
+
+@mixin workMedia {
+  .workMenus {
+    display: none;
+  }
+  .homeBar {
+    height: 10vh;
+    align-items: center;
+    button {
+      display: flex;
+      margin: auto;
+      justify-content: space-between;
+      align-items: center;
+      height: 5vh;
+      color: #7a7a7a;
+      font-family: "crima";
+      font-size: 1.5em;
+      cursor: pointer;
+      svg {
+        display: none;
+        transition: display;
+      }
+
+      &.clicked {
+        color: #4cafa9;
+        svg {
+          display: inline;
+          height: 50%;
+          margin-left: 1vw;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .homeBar {
+    .home {
+      width: 7vw;
+    }
+  }
+  @include workMedia;
+}
+
+@include mobileLandscape {
+  .homeBar {
+    .home {
+      width: 7vw;
+    }
+  }
+  @include workMedia;
+}
+
+@include mobilePortrait {
+  .homeBar {
+    .home {
+      width: 9vw;
+    }
+  }
+  @include workMedia;
 }
