@@ -24,10 +24,12 @@ export default function Main() {
   const [hoveredSpan, setHoveredSpan] = useState(null);
   const [hoverGif, setHoverGif] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isGifVisible, setIsGifVisible] = useState(false);
 
   const handleSpanHover = (spanKey, gif) => {
     setHoveredSpan(spanKey);
     setHoverGif(gif);
+    setIsGifVisible(true);
   };
 
   const handleSpanClick = (spanKey, gif) => {
@@ -274,6 +276,7 @@ export default function Main() {
                         onMouseLeave={() => {
                           setHoveredSpan(null);
                           setHoverGif(null);
+                          setIsGifVisible(false);
                         }}
                         onClick={() => handleSpanClick('span1', planning)}
                       >
@@ -288,6 +291,7 @@ export default function Main() {
                         onMouseLeave={() => {
                           setHoveredSpan(null);
                           setHoverGif(null);
+                          setIsGifVisible(false);
                         }}
                         onClick={() => handleSpanClick('span2', communicate)}
                       >
@@ -301,6 +305,7 @@ export default function Main() {
                         onMouseLeave={() => {
                           setHoveredSpan(null);
                           setHoverGif(null);
+                          setIsGifVisible(false);
                         }}
                         onClick={() => handleSpanClick('span3', partner)}
                       >
@@ -315,6 +320,7 @@ export default function Main() {
                         onMouseLeave={() => {
                           setHoveredSpan(null);
                           setHoverGif(null);
+                          setIsGifVisible(false);
                         }}
                         onClick={() => handleSpanClick('span4', levelup)}
                       >
@@ -329,6 +335,7 @@ export default function Main() {
                         onMouseLeave={() => {
                           setHoveredSpan(null);
                           setHoverGif(null);
+                          setIsGifVisible(false);
                         }}
                         onClick={() => handleSpanClick('span5', trendy)}
                       >
@@ -351,18 +358,12 @@ export default function Main() {
                     </div>
                   </div>
                   <div className="aboutPics">
-                    {/* <div
-                      className="aboutGif lazy"
-                      // src={hoverGif}
-                      style={{
-                        backgroundImage: `url(${hoverGif})`,
-                        backgroundSize: 'cover',
-                      }}
-                    /> */}
                     <LazyLoadImage
                       alt="aboutGIF"
                       src={hoverGif}
-                      className="aboutGif lazy"
+                      className={`aboutGif lazy  ${
+                        isGifVisible ? 'visible' : 'hidden'
+                      }`}
                     />
                   </div>
                 </div>

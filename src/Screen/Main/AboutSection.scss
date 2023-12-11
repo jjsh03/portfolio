@@ -71,16 +71,22 @@
     border-radius: 999px;
   }
 
+  .visible {
+    display: block;
+  }
+  .hidden {
+    visibility: hidden;
+  }
+
   @mixin aboutMedia {
     grid-template-rows: 30vh auto;
     .aboutText {
       grid-column: 1/3;
       order: 2;
-      height: fit-content;
-      margin: auto;
     }
     .aboutPics {
       grid-column: 1/3;
+      height: 30vh;
     }
 
     .overviewContent,
@@ -91,9 +97,8 @@
       }
     }
     .aboutGif {
-      height: 100%;
-      width: auto;
-      aspect-ratio: 2/1;
+      height: auto;
+      width: 80%;
       border-radius: 999px;
     }
   }
