@@ -32,7 +32,7 @@ export default function WorkWeb() {
       console.log(`Selected Menu: ${selectedMenuFromLocation}`);
       setSelectedMenu(selectedMenuFromLocation);
       console.log(selectedMenu);
-      navigate({ ...location, state: null });
+      // navigate({ ...location, state: null });
     } else {
       setSelectedMenu('web');
     }
