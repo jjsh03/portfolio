@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import './style.scss';
 import { useParams } from 'react-router';
 import detailIcon from '../../asset/detailIcon.svg';
 import imac from '../../asset/imac.png';
 import MoreDetail from '../../components/MoreDetail/MoreDetail';
+import beatbay1 from '../../asset/beatbay1.gif';
+import beatbay2 from '../../asset/beatbay2.gif';
+import beatbay3 from '../../asset/beatbay3.gif';
+import beatbay4 from '../../asset/beatbay4.gif';
+import beatbay5 from '../../asset/beatbay5.gif';
+import mealsac1 from '../../asset/mealsac1.gif';
+import mealsac2 from '../../asset/mealsac2.gif';
+import mealsac3 from '../../asset/mealsac3.gif';
+import mealsac4 from '../../asset/mealsac4.gif';
+import mealsac5 from '../../asset/mealsac5.gif';
+import mealsac6 from '../../asset/mealsac6.gif';
+import pf1 from '../../asset/pf1.gif';
+import pf2 from '../../asset/pf2.gif';
+import pf3 from '../../asset/pf3.gif';
+import pf4 from '../../asset/pf4.gif';
+import { HashLoader } from 'react-spinners';
+import back from '../../asset/backarrow.svg';
 
 export default function WorkDetail() {
   let params = useParams();
@@ -29,10 +47,7 @@ export default function WorkDetail() {
           4. 작성한 찜, 리뷰, 게시글을 확인 가능한 유저 페이지
         </div>
       ),
-      links: [
-        'https://github.com/sesac-project-E/mealsac',
-        'http://ec2-54-146-187-238.compute-1.amazonaws.com:8080/',
-      ],
+      links: ['https://github.com/sesac-project-E/mealsac'],
       tools: 'HTML, CSS, Javascript, BootStrap, EJS, axios, AOS, Figma, Git',
       role: (
         <div>
@@ -51,9 +66,7 @@ export default function WorkDetail() {
 
       detail: [
         {
-          img: [
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/fb48534f-1f4c-4de3-9e00-20be5b921079/Animation.gif?id=776cf3d4-97bb-40ed-bda4-3c929fc0d6ca&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=2tUJY0No8TPd7Z1umKlM-2VqeQ3U5dT5uKRPxjwq0C8',
-          ],
+          img: [mealsac1],
           h: '사이트 정체성에 알맞은 메인 페이지 구성 및 애니메이션 적용',
           t: [
             '식당 리스트 롤링 애니메이션 적용 → 호버 시 롤링 애니메이션 일시정지 및 크기를 확대하여 사용자 편리함을 증대',
@@ -63,11 +76,7 @@ export default function WorkDetail() {
           ],
         },
         {
-          img: [
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/6bb8e15c-9cae-4476-a304-14c543f5d801/Animation11.gif?id=54445137-b198-4a66-b46b-3f9b89ade56a&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=-jq48B3mYiNUcEJsh7ZVBCtGghMxDXOdNKCMMipYEqY',
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/cd7056a3-3b5a-4724-9701-27336c1854d2/Animation12.gif?id=fc2a3965-d00d-4977-a795-bdcfc6be9681&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=mO72ingnql74sPJEAqqcPDVWvDlHMYFiIPbZgEflUs0',
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/0b26cd30-5a30-4ff6-a492-c3fa81049bfb/Animation15.gif?id=bc4e6000-491f-410a-b4c6-d23ecd1bfbf2&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=QrvDzopQ9Zor2lgKVJM3tSat8yHwLo-HPjT5D-Opfok',
-          ],
+          img: [mealsac2, mealsac3, mealsac4],
           h: '로그인, 회원가입, 회원 정보 수정 페이지 제작',
           t: [
             '보안 이슈를 최대한 줄이기 위해 사용자 회원 정보는 아이디, 닉네임, 비밀번호만 기입',
@@ -76,10 +85,7 @@ export default function WorkDetail() {
           ],
         },
         {
-          img: [
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/0d706d83-c29e-4605-8948-aa8397670101/Animation3.gif?id=1d2043b8-df84-4c6b-9f16-066d37806e7d&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=Y_tZv9s3enFOajJRSsLL6zajp2JglDUbFhJ-eRBPHyI',
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/14dc6781-d77e-46d0-b6b5-2f1d17739494/Animation4.gif?id=20da9a52-61f9-4685-86f1-f3a832723185&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=Bu4fJm8SsYv-qR0sSdyx1tnMy5iaGRd1eBUIKMHJI5k',
-          ],
+          img: [mealsac5, mealsac6],
           h: '마이페이지에서 자신의 데이터(찜, 리뷰, 글) 조회 및 수정 가능',
           t: [
             '보다 깔끔한 데이터 관리를 위하여 각 목록 버튼 클릭시 api 요청하여 데이터 조회',
@@ -130,9 +136,7 @@ export default function WorkDetail() {
       thumbnail: '/vinyl.mp4',
       detail: [
         {
-          img: [
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/f3074320-fbb3-474c-b6d9-835f7b562967/Animation6.gif?id=10c6b494-bf4f-4beb-bf92-d3d621b5d6d2&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=dP256jrFxtkmY4v39k7amWLQ_eC3jMNtNVh1H8i0S_Q',
-          ],
+          img: [beatbay1],
           h: '거래 상품 등록 및 수정 페이지 제작',
           t: [
             '제목, 카테고리, 상품이미지, 가격, 설명, 상태, 거래방식, 지역 항목을 포함한 폼 제작',
@@ -140,9 +144,7 @@ export default function WorkDetail() {
           ],
         },
         {
-          img: [
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/9cc1402d-2235-416f-a286-2ff98de0f1c4/Animation3.gif?id=6b1fbed2-2927-4240-b67a-194b55542629&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=-rySy1Cc_T1Sxe4Lb_X6bX2_nUcLVmiN4DUns-xyJSM',
-          ],
+          img: [beatbay2],
           h: '마이페이지 대시보드, 판매, 구매, 찜 페이지 구현',
           t: [
             '자신이 받은 후기와 팔로워, 팔로잉 목록을 모달로 조회 가능',
@@ -153,18 +155,14 @@ export default function WorkDetail() {
           ],
         },
         {
-          img: [
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/66271ff5-cd62-45d0-a583-4600dfe7ed97/Animation4.gif?id=3ea50c94-1246-4764-aad8-3461156ae62d&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=tKkTuvon_2wpuwqZZ68xRT8Taaolg1QcXs_shSFvjkA',
-          ],
+          img: [beatbay3],
           h: '자신 이외의 다른 유저 페이지(판매자 페이지) 제작',
           t: [
             '거래의 신뢰도를 높일 수 있도록 해당 유저가 받은 후기, 팔로워 모달 통해 확인 가능',
           ],
         },
         {
-          img: [
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/5b0c9e8d-90bc-459a-a345-677eecaa3160/Animation2.gif?id=05719e79-addb-4e2a-b7ee-6887e70635a6&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=wN9rnbf2TblTsYY0fqAkS3iHcAo0GJlk2cIqW-vRhPw',
-          ],
+          img: [beatbay4],
           h: '공지사항, 칼럼 페이지 제작',
           t: [
             '관리자 이외의 사용자는 탭으로 나누어 공지사항, 칼럼 각각 조회 가능',
@@ -172,9 +170,7 @@ export default function WorkDetail() {
           ],
         },
         {
-          img: [
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/df8f95f3-3dee-42ed-ab9e-193766bf3b82/Animation5.gif?id=72f8516d-ddf8-4553-bd7d-34768de7aba1&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=VHa7e6exNPQygy3TrOg5LS-HvHDYZkf5xgfx4No_HQ0',
-          ],
+          img: [beatbay5],
           h: '유저, 칼럼 및 공지, 게시글 관리가 가능한 관리자 페이지 제작',
           t: [
             '전체 유저 조회 및 등급 조정, 삭제 가능',
@@ -236,11 +232,7 @@ export default function WorkDetail() {
       thumbnail: '/water.mp4',
       detail: [
         {
-          img: [
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/f3074320-fbb3-474c-b6d9-835f7b562967/Animation6.gif?id=10c6b494-bf4f-4beb-bf92-d3d621b5d6d2&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702058400000&signature=dP256jrFxtkmY4v39k7amWLQ_eC3jMNtNVh1H8i0S_Q',
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/d084e230-1c61-4ac8-903b-f9fa7024a4ab/portfolio2.gif?id=be7078e3-49b3-4d78-90ec-2b0c6bb33552&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702065600000&signature=jYN1MhPMfjKeSpSjv21_3Mjy1YnHBZ8Td1aTYccEBEw',
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/18628c5a-2c58-4e68-beb6-422cceb66f9d/portfolio4.gif?id=7898df8a-bf82-4a75-b8e9-6007e2ee0c5b&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702065600000&signature=dQ41NSWmEE_tkILMBWbDnxorxcNK14mWL81IrtyOeCM',
-          ],
+          img: [pf1, pf2, pf3],
           h: '감각적인 사용자 경험을 위한 인터랙티브 효과',
           t: [
             '커서의 이동, 클릭에 따른 파동 효과',
@@ -249,9 +241,7 @@ export default function WorkDetail() {
           ],
         },
         {
-          img: [
-            'https://file.notion.so/f/f/2eb25131-fd95-4f1f-85a6-eeaf02311dec/3ccc5880-a4bd-47f5-883d-117996bcf7c7/portfolio3.gif?id=b6128575-d313-45b8-90c6-6a22f291aa10&table=block&spaceId=2eb25131-fd95-4f1f-85a6-eeaf02311dec&expirationTimestamp=1702065600000&signature=RMvDcilebupRTVZAumzx_AbQOfySA8e1yy8H0GeC-4U',
-          ],
+          img: [pf4],
           h: '페이지 이동 없이 이메일 발송',
           t: ['emailJS를 사용하여 포트폴리오 사이트 내에서 바로 컨택이 가능'],
         },
@@ -266,87 +256,134 @@ export default function WorkDetail() {
     });
   };
 
-  return (
-    <div className='container detailContainer'>
-      <video autoPlay loop muted playsInline className='backVideo'>
-        <source src={detailInfo.thumbnail} type='video/mp4' />
-      </video>
-      <div className='backPath'>
-        <section className='detailTitle'>
-          <img src={detailIcon} alt='icon' className='detailIcon' />
-          <h1>{detailInfo.name}</h1>
-          <p>{detailInfo.type}</p>
-        </section>
-        <main className='moreInfoSection'>
-          <div>
-            <h1>{detailInfo.name}</h1>
-            <p>{detailInfo.team}</p>
-          </div>
-          <div>
-            <div className='workInfo'>
-              <div>
-                <div className='overview'>
-                  <p className='infoName'>OVERVIEW</p>
-                  <div>{detailInfo.overview}</div>
-                </div>
-                <div className='date'>
-                  <p className='infoName'>DATE</p>
-                  <div>{detailInfo.date}</div>
-                </div>
-                {detailInfo.links && detailInfo.links.length > 0 && (
-                  <div className='Links'>
-                    <p className='infoName'>LINKS</p>
-                    <div>
-                      {detailInfo.links.length > 1 && (
-                        <a
-                          href={detailInfo.links[1]}
-                          target='_blank'
-                          rel='noopener noreferrer'
-                        >
-                          <p>배포</p>
-                        </a>
-                      )}
-                      <a
-                        href={detailInfo.links[0]}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                      >
-                        <p>코드</p>
-                      </a>
-                    </div>
-                  </div>
-                )}
+  const [loading, setLoading] = useState(true);
 
-                <div className='tools'>
-                  <p className='infoName'>TOOLS</p>
-                  <div>{detailInfo.tools}</div>
-                </div>
-                {detailInfo.role && (
-                  <div className='role'>
-                    <p className='infoName'>ROLE</p>
-                    <div>{detailInfo.role}</div>
-                  </div>
-                )}
+  useEffect(() => {
+    const images = [
+      beatbay1,
+      beatbay2,
+      beatbay3,
+      beatbay4,
+      beatbay5,
+      mealsac1,
+      mealsac2,
+      mealsac3,
+      mealsac4,
+      mealsac5,
+      mealsac6,
+      pf1,
+      pf2,
+      pf3,
+      pf4,
+    ];
+
+    const imagePromises = images.map((imagePath) => {
+      const image = new Image();
+      image.src = imagePath;
+      return new Promise((resolve) => {
+        image.onload = resolve;
+      });
+    });
+
+    Promise.all(imagePromises).then(() => {
+      setLoading(false);
+    });
+  }, []);
+
+  return (
+    <div className="container detailContainer">
+      {loading && (
+        <div className="loading">
+          <h2>Loading</h2>
+          <HashLoader color="#4cafa9" size={100} />
+        </div>
+      )}
+      {!loading && (
+        <>
+          <video autoPlay loop muted playsInline className="backVideo">
+            <source src={detailInfo.thumbnail} type="video/mp4" />
+          </video>
+          <div className="backPath">
+            <NavLink to={'/work'}>
+              <img src={back} alt="back" className="backArrow" />
+            </NavLink>
+            <section className="detailTitle">
+              <img src={detailIcon} alt="icon" className="detailIcon" />
+              <h1>{detailInfo.name}</h1>
+              <p>{detailInfo.type}</p>
+            </section>
+            <main className="moreInfoSection">
+              <div>
+                <h1>{detailInfo.name}</h1>
+                <p>{detailInfo.team}</p>
               </div>
-            </div>
-            <div className='workGif'>
-              <img src={imac} alt='imac' className='imac' />
-              <div className={`imacGif ${detailInfo.name}gif`} />
-            </div>
+              <div>
+                <div className="workInfo">
+                  <div>
+                    <div className="overview">
+                      <p className="infoName">OVERVIEW</p>
+                      <div>{detailInfo.overview}</div>
+                    </div>
+                    <div className="date">
+                      <p className="infoName">DATE</p>
+                      <div>{detailInfo.date}</div>
+                    </div>
+                    {detailInfo.links && detailInfo.links.length > 0 && (
+                      <div className="Links">
+                        <p className="infoName">LINKS</p>
+                        <div>
+                          {detailInfo.links.length > 1 && (
+                            <a
+                              href={detailInfo.links[1]}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <p>배포</p>
+                            </a>
+                          )}
+                          <a
+                            href={detailInfo.links[0]}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <p>코드</p>
+                          </a>
+                        </div>
+                      </div>
+                    )}
+
+                    <div className="tools">
+                      <p className="infoName">TOOLS</p>
+                      <div>{detailInfo.tools}</div>
+                    </div>
+                    {detailInfo.role && (
+                      <div className="role">
+                        <p className="infoName">ROLE</p>
+                        <div>{detailInfo.role}</div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                <div className="workGif">
+                  <img src={imac} alt="imac" className="imac" />
+                  <div className={`imacGif ${detailInfo.name}gif`} />
+                </div>
+              </div>
+            </main>
           </div>
-        </main>
-      </div>
-      <div className='moreDetail'>
-        <h1>DETAIL</h1>
-        {detailInfo.detail &&
-          detailInfo.detail.length > 0 &&
-          detailInfo.detail.map((detailItem, index) => (
-            <MoreDetail key={index} data={detailItem} />
-          ))}
-      </div>
-      <footer>
-        <p onClick={backToTOP}>Back to top ⇧</p>
-      </footer>
+          <div className="moreDetail">
+            <h1>DETAIL</h1>
+            {detailInfo.detail &&
+              detailInfo.detail.length > 0 &&
+              detailInfo.detail.map((detailItem, index) => (
+                <MoreDetail key={index} data={detailItem} />
+              ))}
+          </div>
+          <footer>
+            <p onClick={backToTOP}>Back to top ⇧</p>
+          </footer>
+        </>
+      )}
     </div>
   );
 }

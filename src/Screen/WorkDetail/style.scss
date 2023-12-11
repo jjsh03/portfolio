@@ -1,6 +1,14 @@
 @import '../../config/globalStyles.scss';
 @import '../../config/utils';
 
+.backArrow {
+  width: toSize(80);
+  z-index: 999;
+  position: fixed;
+  top: 50px;
+  cursor: pointer;
+}
+
 .backVideo {
   width: 100%;
   position: absolute;

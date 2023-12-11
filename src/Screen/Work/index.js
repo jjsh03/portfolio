@@ -1,38 +1,42 @@
-import React, { useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
-import "./style.scss";
-import WorkMenu from "../../components/WorkMenu/WorkMenu";
-import home from "../../asset/home.png";
-import WebCompo from "../../components/WorkComponent/WebCompo";
-import DesignCompo from "../../components/WorkComponent/DesignCompo";
-import OthersCompo from "../../components/WorkComponent/OthersCompo";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useEffect, useState } from 'react';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import './style.scss';
+import WorkMenu from '../../components/WorkMenu/WorkMenu';
+import home from '../../asset/home.png';
+import WebCompo from '../../components/WorkComponent/WebCompo';
+import DesignCompo from '../../components/WorkComponent/DesignCompo';
+import OthersCompo from '../../components/WorkComponent/OthersCompo';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export default function WorkWeb() {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const setVh = () => {
     document.documentElement.style.setProperty(
-      "--vh",
+      '--vh',
       `${window.innerHeight}px`
     );
   };
 
-  window.addEventListener("resize", setVh);
+  window.addEventListener('resize', setVh);
   setVh();
 
-  const [selectedMenu, setSelectedMenu] = useState("");
+  const [selectedMenu, setSelectedMenu] = useState('');
 
   useEffect(() => {
     console.log(location.state);
     if (location.state) {
-      const selectedMenuFromLocation = location.state || "web";
+      const selectedMenuFromLocation = location.state || 'web';
       console.log(`Selected Menu: ${selectedMenuFromLocation}`);
       setSelectedMenu(selectedMenuFromLocation);
       console.log(selectedMenu);
+      navigate({ ...location, state: null });
+    } else {
+      setSelectedMenu('web');
     }
-  }, [location]);
+  }, [location, navigate]);
   console.log(selectedMenu);
 
   const handleMenuClick = (menu) => {
@@ -59,24 +63,24 @@ export default function WorkWeb() {
     <div className="container workContainer">
       <div className="homeBar">
         <button
-          className={`webMenuMobile ${selectedMenu === "web" ? "clicked" : ""}`}
-          onClick={() => handleMenuClick("web")}
+          className={`webMenuMobile ${selectedMenu === 'web' ? 'clicked' : ''}`}
+          onClick={() => handleMenuClick('web')}
         >
           web{btnDeco}
         </button>
         <button
           className={`designMenuMobile ${
-            selectedMenu === "design" ? "clicked" : ""
+            selectedMenu === 'design' ? 'clicked' : ''
           }`}
-          onClick={() => handleMenuClick("design")}
+          onClick={() => handleMenuClick('design')}
         >
           design{btnDeco}
         </button>
         <button
           className={`othersMenuMobile ${
-            selectedMenu === "others" ? "clicked" : ""
+            selectedMenu === 'others' ? 'clicked' : ''
           }`}
-          onClick={() => handleMenuClick("others")}
+          onClick={() => handleMenuClick('others')}
         >
           others{btnDeco}
         </button>
@@ -86,9 +90,9 @@ export default function WorkWeb() {
       </div>
       <WorkMenu selectedMenu={selectedMenu} setSelectedMenu={setSelectedMenu} />
 
-      {selectedMenu === "web" && <WebCompo />}
-      {selectedMenu === "design" && <DesignCompo />}
-      {selectedMenu === "others" && <OthersCompo />}
+      {selectedMenu === 'web' && <WebCompo />}
+      {selectedMenu === 'design' && <DesignCompo />}
+      {selectedMenu === 'others' && <OthersCompo />}
     </div>
   );
 }
