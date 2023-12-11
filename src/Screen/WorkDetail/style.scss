@@ -16,7 +16,7 @@
 }
 
 .backPath {
-  background-image: url('../../asset/detaileclips.svg');
+  background: linear-gradient(0deg, #fefdf9 51.15%, rgba(0, 0, 0, 0.144) 100%);
   width: 100%;
   height: toSize(2400);
   position: relative;
@@ -142,6 +142,12 @@
   }
 }
 
+.eclipse {
+  height: 10vh;
+  background-color: white;
+  clip-path: ellipse((50% 60% at 50% 0%));
+}
+
 .moreDetail {
   display: flex;
   flex-direction: column;
@@ -173,4 +179,11 @@
       color: white;
     }
   }
+}
+
+@mixin workDetailMedia {
+}
+
+@include tablet {
+  @include workDetailMedia;
 }

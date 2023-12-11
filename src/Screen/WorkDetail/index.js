@@ -371,6 +371,7 @@ export default function WorkDetail() {
               </div>
             </main>
           </div>
+          <div className="eclipse" />
           <div className="moreDetail">
             <h1>DETAIL</h1>
             {detailInfo.detail &&
