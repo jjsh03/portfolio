@@ -18,6 +18,7 @@ import { useNavigate } from 'react-router-dom';
 import { ScrollToTopOnMount, Section, SectionsContainer } from 'react-fullpage';
 import Swal from 'sweetalert2';
 import { HashLoader } from 'react-spinners';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function Main() {
   const [hoveredSpan, setHoveredSpan] = useState(null);
@@ -155,15 +156,7 @@ export default function Main() {
   };
 
   useEffect(() => {
-    const images = [
-      communicate,
-      levelup,
-      partner,
-      planning,
-      trendy,
-      star,
-      wave,
-    ];
+    const images = [planning, wave];
 
     const imagePromises = images.map((imagePath) => {
       const image = new Image();
@@ -358,12 +351,18 @@ export default function Main() {
                     </div>
                   </div>
                   <div className="aboutPics">
-                    <div
-                      className="aboutGif"
+                    {/* <div
+                      className="aboutGif lazy"
+                      // src={hoverGif}
                       style={{
                         backgroundImage: `url(${hoverGif})`,
                         backgroundSize: 'cover',
                       }}
+                    /> */}
+                    <LazyLoadImage
+                      alt="aboutGIF"
+                      src={hoverGif}
+                      className="aboutGif lazy"
                     />
                   </div>
                 </div>
