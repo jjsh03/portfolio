@@ -1,5 +1,5 @@
-@import "../../config/globalStyles.scss";
-@import "../../config/utils";
+@import '../../config/globalStyles.scss';
+@import '../../config/utils';
 
 .webList {
   display: grid;
@@ -10,7 +10,7 @@
   cursor: pointer;
   transition: 0.3s color;
   h1 {
-    font-family: "PyeongChangPeace";
+    font-family: 'PyeongChangPeace';
     font-size: 2em;
     margin: 0;
   }
@@ -18,7 +18,7 @@
     font-weight: 400;
   }
   p {
-    font-family: "PyeongChang";
+    font-family: 'PyeongChang';
     font-size: 1em;
     margin: 0;
   }
@@ -31,7 +31,7 @@
 }
 
 .webList:hover::after {
-  content: "";
+  content: '';
   position: absolute;
   top: var(--mouseY);
   left: var(--mouseX);
@@ -45,16 +45,16 @@
 }
 
 .webList:first-child::after {
-  background-image: url("../../asset/mealsac_thumbnail.JPG");
+  background-image: url('../../asset/beatbay_thumbnail.JPG');
 }
 .webList:nth-child(2)::after {
-  background-image: url("../../asset/beatbay_thumbnail.JPG");
+  background-image: url('../../asset/ahwhew_thumbnail.JPG');
 }
 .webList:nth-child(3)::after {
-  background-color: #4cafa9;
+  background-image: url('../../asset/mealsac_thumbnail.JPG');
 }
 .webList:nth-child(4)::after {
-  background-image: url("../../asset/portfolio_thumbnail.JPG");
+  background-image: url('../../asset/portfolio_thumbnail.JPG');
 }
 
 @mixin webCompoMedia {
