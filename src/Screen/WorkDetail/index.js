@@ -183,13 +183,14 @@ export default function WorkDetail() {
   } else if (params.id == 3) {
     detailInfo = {
       id: 3,
-      name: 'SOMETHING',
+      name: 'AH-WHEW',
       type: 'web',
       team: 'Team project',
-      date: '2023. 12. 11 ~ 2023. 12. 27',
+      date: '2023. 12. 15 ~ 2023. 12. 29',
       overview: (
         <div>
-          뭐라구,,,뭐라구,,,
+          아휴는 유저가 쓰는 일기를 기반으로 AI 를 이용해 그림 일기를 그려주는
+          웹 서비스입니다. 위 서비스에서 제공하는 핵심 기능은 총 5가지 입니다.
           <br />
           <br />
           1. ㄴㄴㄴ
@@ -204,7 +205,7 @@ export default function WorkDetail() {
       links: [],
       tools: 'HTML, CSS, JavaScript, Sass, React, Axios, AOS, Figma, Git',
       role: <div>• 어쩌고,,</div>,
-      thumbnail: '/vinyl.mp4',
+      thumbnail: '/diary.mp4',
     };
   } else if (params.id == 4) {
     detailInfo = {
