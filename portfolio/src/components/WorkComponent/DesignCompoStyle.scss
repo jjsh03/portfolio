@@ -1,11 +1,23 @@
 @import '../../config/globalStyles.scss';
-@import '~slick-carousel/slick/slick.css';
-@import '~slick-carousel/slick/slick-theme.css';
+// @import '~slick-carousel/slick/slick.css';
+// @import '~slick-carousel/slick/slick-theme.css';
+
+.designSection {
+  grid-template-columns: toSize(50) toSize(1200) toSize(50);
+  align-items: center;
+  justify-items: center;
+}
 
 .designList {
   padding: toSize(120) 0;
-  width: toSize(1300);
-  //   display: grid;
-  //   grid-auto-flow: column;
-  //   overflow: hidden;
+  width: toSize(1180);
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  img {
+    width: toSize(20);
+    margin-bottom: toSize(70);
+  }
 }
