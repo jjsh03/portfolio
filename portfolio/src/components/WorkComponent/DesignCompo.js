@@ -12,27 +12,6 @@ import nextIcon from '../../asset/next.svg';
 import StyledSlider from 'react-slick';
 import Slider from 'react-slick';
 
-// function SampleNextArrow(props) {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{ ...style, display: 'block' }}
-//       onClick={onClick}
-//     />
-//   );
-// }
-
-// function SamplePrevArrow(props) {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{ ...style, display: 'block' }}
-//       onClick={onClick}
-//     />
-//   );
-// }
 export default function DesignCompo() {
   const artboards = [
     {
