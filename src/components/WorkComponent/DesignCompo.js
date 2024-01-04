@@ -115,29 +115,29 @@ export default function DesignCompo() {
   }, []);
 
   return (
-    <section className="section designSection">
+    <section className='section designSection'>
       {loading && (
-        <div className="loading">
+        <div className='loading' style={{ marginLeft: '56vw' }}>
           <h2>Loading</h2>
-          <HashLoader color="#4cafa9" size={100} />
+          <HashLoader color='#4cafa9' size={100} />
         </div>
       )}
       {!loading && (
         <>
-          <div className="prev" onClick={previous}>
-            <img src={prevIcon} alt="이전 화살표" />
+          <div className='prev' onClick={previous}>
+            <img src={prevIcon} alt='이전 화살표' />
           </div>
-          <div className="designList">
+          <div className='designList'>
             <Slider {...sliderSettings} ref={slickRef}>
               {artboards.map((artboard) => (
-                <div key={artboard.id} className="slick-slide">
+                <div key={artboard.id} className='slick-slide'>
                   <DesignCard data={artboard} />
                 </div>
               ))}
             </Slider>
           </div>
-          <div className="next" onClick={next}>
-            <img src={nextIcon} alt="다음 화살표" />
+          <div className='next' onClick={next}>
+            <img src={nextIcon} alt='다음 화살표' />
           </div>
         </>
       )}
