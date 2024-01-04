@@ -30,6 +30,7 @@ import back from '../../asset/backarrow.svg';
 export default function WorkDetail() {
   let params = useParams();
   let detailInfo;
+
   if (params.id === '1') {
     detailInfo = {
       id: 1,
@@ -328,7 +329,7 @@ export default function WorkDetail() {
     Promise.all(imagePromises).then(() => {
       setLoading(false);
     });
-  }, []);
+  }, [params.id]);
 
   return (
     <div className='container detailContainer'>
