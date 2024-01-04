@@ -16,7 +16,7 @@ export default function WorkWeb() {
   const setVh = () => {
     document.documentElement.style.setProperty(
       '--vh',
-      `${window.innerHeight}px`
+      `${window.innerHeight}px`,
     );
   };
 
@@ -45,23 +45,23 @@ export default function WorkWeb() {
 
   const btnDeco = (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      height="70%"
-      viewBox="0 0 16 19"
-      fill="none"
+      xmlns='http://www.w3.org/2000/svg'
+      height='70%'
+      viewBox='0 0 16 19'
+      fill='none'
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M0 8.98691C4.61497 10.2128 7.9912 14.1207 7.99998 18.7545C8.00876 14.1207 11.385 10.2128 16 8.98691C11.6591 7.83381 8.41414 4.30779 8.03673 0.0367652L7.99996 0L7.96323 0.036728C7.58583 4.30777 4.3409 7.8338 0 8.98691Z"
-        fill="#4CAFA9"
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M0 8.98691C4.61497 10.2128 7.9912 14.1207 7.99998 18.7545C8.00876 14.1207 11.385 10.2128 16 8.98691C11.6591 7.83381 8.41414 4.30779 8.03673 0.0367652L7.99996 0L7.96323 0.036728C7.58583 4.30777 4.3409 7.8338 0 8.98691Z'
+        fill='#4CAFA9'
       />
     </svg>
   );
 
   return (
-    <div className="container workContainer">
-      <div className="homeBar">
+    <div className='container workContainer'>
+      <div className='homeBar'>
         <button
           className={`webMenuMobile ${selectedMenu === 'web' ? 'clicked' : ''}`}
           onClick={() => handleMenuClick('web')}
@@ -84,8 +84,8 @@ export default function WorkWeb() {
         >
           others{btnDeco}
         </button>
-        <NavLink to="/">
-          <img src={home} alt="home" className="home" />
+        <NavLink to='/'>
+          <img src={home} alt='home' className='home' />
         </NavLink>
       </div>
       <WorkMenu selectedMenu={selectedMenu} setSelectedMenu={setSelectedMenu} />

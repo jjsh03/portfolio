@@ -16,6 +16,10 @@ import mealsac3 from '../../asset/mealsac3.gif';
 import mealsac4 from '../../asset/mealsac4.gif';
 import mealsac5 from '../../asset/mealsac5.gif';
 import mealsac6 from '../../asset/mealsac6.gif';
+import ah1 from '../../asset/ahwhew1.gif';
+import ah2 from '../../asset/ahwhew2.gif';
+import ah3 from '../../asset/ahwhew3.gif';
+import ah4 from '../../asset/ahwhew4.gif';
 import pf1 from '../../asset/pf1.gif';
 import pf2 from '../../asset/pf2.gif';
 import pf3 from '../../asset/pf3.gif';
@@ -26,7 +30,7 @@ import back from '../../asset/backarrow.svg';
 export default function WorkDetail() {
   let params = useParams();
   let detailInfo;
-  if (params.id == 1) {
+  if (params.id === '1') {
     detailInfo = {
       id: 1,
       name: 'MEALSAC',
@@ -94,7 +98,7 @@ export default function WorkDetail() {
         },
       ],
     };
-  } else if (params.id == 2) {
+  } else if (params.id === '2') {
     detailInfo = {
       id: 2,
       name: 'BEATBAY',
@@ -180,7 +184,7 @@ export default function WorkDetail() {
         },
       ],
     };
-  } else if (params.id == 3) {
+  } else if (params.id === '3') {
     detailInfo = {
       id: 3,
       name: 'AH-WHEW',
@@ -193,21 +197,56 @@ export default function WorkDetail() {
           웹 서비스입니다. 위 서비스에서 제공하는 핵심 기능은 총 5가지 입니다.
           <br />
           <br />
-          1. ㄴㄴㄴ
+          1. AI가 사용자 입력한 텍스트의 감정 분석 수행 후 그림 출력 및 어울리는
+          밈 추천
           <br />
-          2. ㅁㅁㅁ
+          2. KAKAO API를 통해 AI가 생성한 그림 공유 가능
           <br />
-          3. ㄷㄷㄷ
+          3. 감정 분석 결과에 대한 감정에 대한 성별/연령별 등의 통계 제공
           <br />
-          4. ㅠㅠㅠ
+          4. 사용자의 감정 통계, 결과 캘린더 제공
+          <br />
+          5. 감정 분석 결과에 따른 사용자별 상품 추천
         </div>
       ),
-      links: [],
-      tools: 'HTML, CSS, JavaScript, Sass, React, Axios, AOS, Figma, Git',
-      role: <div>• 어쩌고,,</div>,
+      links: ['https://github.com/sessac-3rd-team-A/FE', 'http://ahwhew.shop/'],
+      tools: 'HTML, CSS, TypeScript, Sass, React, Next.js, Figma, Git',
+      role: (
+        <div>
+          • 사용자의 동작에따라 동적으로 변하는 일기 작성 페이지 <br />
+          • 카카오톡 공유가 가능한 일기 결과 페이지 <br />
+          • 에러 및 로딩 페이지 <br />• Figma를 활용한 UX, UI 디자인
+        </div>
+      ),
       thumbnail: '/diary.mp4',
+      detail: [
+        {
+          img: [ah1],
+          h: '일기 작성 페이지',
+          t: [
+            '커스텀 프로퍼티(--startPoint)를 사용해 시작 위치를 요소에 따라 변수로 정의하여  위치값에 따라 시간차로 떨어지는 듯한 애니메이션 제작',
+            '하나의 버튼 텍스트(‘START’, ‘OK’)에 따라 다른 동작을 수행하여 사용자 인터페이스의 동적인 변화 처리',
+            'Token값을 확인해 로그인 유무에 따라 header값을 다르게 하여 API 요청',
+          ],
+        },
+        {
+          img: [ah2],
+          h: '일기 결과 페이지',
+          t: [
+            '직접적으로 동적 연결된 url(result/[id]) 접근 가능을 위해 작성페이지에서 prop으로 가져오는 것이 아닌 따로 GET 요청 처리',
+            '카카오톡 공유 API 사용 -> 동적으로 변하는 공유 이미지와 url을 User Argument로 설정',
+            'Next.js의 이미지 최적화를 위해 Image태그를 사용해 webp로 변환',
+            '프로젝트 톤에 맞는 커스텀 차트 구현을 위해 결과 값을 width값으로 설정',
+          ],
+        },
+        {
+          img: [ah3, ah4],
+          h: '프로젝트 전반 로딩, 결과 페이지 제작',
+          t: [],
+        },
+      ],
     };
-  } else if (params.id == 4) {
+  } else if (params.id === '4') {
     detailInfo = {
       id: 4,
       name: 'PORTFOLIO',
@@ -292,60 +331,60 @@ export default function WorkDetail() {
   }, []);
 
   return (
-    <div className="container detailContainer">
+    <div className='container detailContainer'>
       {loading && (
-        <div className="loading">
+        <div className='loading'>
           <h2>Loading</h2>
-          <HashLoader color="#4cafa9" size={100} />
+          <HashLoader color='#4cafa9' size={100} />
         </div>
       )}
       {!loading && (
         <>
-          <video autoPlay loop muted playsInline className="backVideo">
-            <source src={detailInfo.thumbnail} type="video/mp4" />
+          <video autoPlay loop muted playsInline className='backVideo'>
+            <source src={detailInfo.thumbnail} type='video/mp4' />
           </video>
-          <div className="backPath">
+          <div className='backPath'>
             <NavLink to={'/work'}>
-              <img src={back} alt="back" className="backArrow" />
+              <img src={back} alt='back' className='backArrow' />
             </NavLink>
-            <section className="detailTitle">
-              <img src={detailIcon} alt="icon" className="detailIcon" />
+            <section className='detailTitle'>
+              <img src={detailIcon} alt='icon' className='detailIcon' />
               <h1>{detailInfo.name}</h1>
               <p>{detailInfo.type}</p>
             </section>
-            <main className="moreInfoSection">
+            <main className='moreInfoSection'>
               <div>
                 <h1>{detailInfo.name}</h1>
                 <p>{detailInfo.team}</p>
               </div>
               <div>
-                <div className="workInfo">
+                <div className='workInfo'>
                   <div>
-                    <div className="overview">
-                      <p className="infoName">OVERVIEW</p>
+                    <div className='overview'>
+                      <p className='infoName'>OVERVIEW</p>
                       <div>{detailInfo.overview}</div>
                     </div>
-                    <div className="date">
-                      <p className="infoName">DATE</p>
+                    <div className='date'>
+                      <p className='infoName'>DATE</p>
                       <div>{detailInfo.date}</div>
                     </div>
                     {detailInfo.links && detailInfo.links.length > 0 && (
-                      <div className="Links">
-                        <p className="infoName">LINKS</p>
+                      <div className='Links'>
+                        <p className='infoName'>LINKS</p>
                         <div>
                           {detailInfo.links.length > 1 && (
                             <a
                               href={detailInfo.links[1]}
-                              target="_blank"
-                              rel="noopener noreferrer"
+                              target='_blank'
+                              rel='noopener noreferrer'
                             >
                               <p>배포</p>
                             </a>
                           )}
                           <a
                             href={detailInfo.links[0]}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            target='_blank'
+                            rel='noopener noreferrer'
                           >
                             <p>코드</p>
                           </a>
@@ -353,27 +392,27 @@ export default function WorkDetail() {
                       </div>
                     )}
 
-                    <div className="tools">
-                      <p className="infoName">TOOLS</p>
+                    <div className='tools'>
+                      <p className='infoName'>TOOLS</p>
                       <div>{detailInfo.tools}</div>
                     </div>
                     {detailInfo.role && (
-                      <div className="role">
-                        <p className="infoName">ROLE</p>
+                      <div className='role'>
+                        <p className='infoName'>ROLE</p>
                         <div>{detailInfo.role}</div>
                       </div>
                     )}
                   </div>
                 </div>
-                <div className="workGif">
-                  <img src={imac} alt="imac" className="imac" />
+                <div className='workGif'>
+                  <img src={imac} alt='imac' className='imac' />
                   <div className={`imacGif ${detailInfo.name}gif`} />
                 </div>
               </div>
             </main>
           </div>
-          <div className="eclipse" />
-          <div className="moreDetail">
+          <div className='eclipse' />
+          <div className='moreDetail'>
             <h1>DETAIL</h1>
             {detailInfo.detail &&
               detailInfo.detail.length > 0 &&

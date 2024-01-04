@@ -69,11 +69,11 @@ export default function OthersCompo() {
   }, []);
 
   return (
-    <section className="section othersSection">
+    <section className='section othersSection'>
       {loading && (
-        <div className="loading">
+        <div className='loading'>
           <h2>Loading</h2>
-          <HashLoader color="#4cafa9" size={100} />
+          <HashLoader color='#4cafa9' size={100} />
         </div>
       )}
       {!loading && (
