@@ -67,7 +67,7 @@ export default function WorkDetail() {
           <br />
         </div>
       ),
-      thumbnail: '/meal.mp4',
+      thumbnail: '/meal.webm',
 
       detail: [
         {
@@ -138,7 +138,7 @@ export default function WorkDetail() {
           관리자 페이지
         </div>
       ),
-      thumbnail: '/vinyl.mp4',
+      thumbnail: '/vinyl.webm',
       detail: [
         {
           img: [beatbay1],
@@ -219,7 +219,7 @@ export default function WorkDetail() {
           • 에러 및 로딩 페이지 <br />• Figma를 활용한 UX, UI 디자인
         </div>
       ),
-      thumbnail: '/diary.mp4',
+      thumbnail: '/diary.webm',
       detail: [
         {
           img: [ah1],
@@ -270,7 +270,7 @@ export default function WorkDetail() {
       ),
       links: ['https://github.com/jjsh03/portfolio'],
       tools: 'HTML, CSS, JavaScript, Sass, React, AOS, Figma, Git',
-      thumbnail: '/water.mp4',
+      thumbnail: '/water.webm',
       detail: [
         {
           img: [pf1, pf2, pf3],
@@ -332,60 +332,60 @@ export default function WorkDetail() {
   }, [params.id]);
 
   return (
-    <div className='container detailContainer'>
+    <div className="container detailContainer">
       {loading && (
-        <div className='loading'>
+        <div className="loading">
           <h2>Loading</h2>
-          <HashLoader color='#4cafa9' size={100} />
+          <HashLoader color="#4cafa9" size={100} />
         </div>
       )}
       {!loading && (
         <>
-          <video autoPlay loop muted playsInline className='backVideo'>
-            <source src={detailInfo.thumbnail} type='video/mp4' />
+          <video autoPlay loop muted playsInline className="backVideo">
+            <source src={detailInfo.thumbnail} type="video/webm" />
           </video>
-          <div className='backPath'>
+          <div className="backPath">
             <NavLink to={'/work'}>
-              <img src={back} alt='back' className='backArrow' />
+              <img src={back} alt="back" className="backArrow" />
             </NavLink>
-            <section className='detailTitle'>
-              <img src={detailIcon} alt='icon' className='detailIcon' />
+            <section className="detailTitle">
+              <img src={detailIcon} alt="icon" className="detailIcon" />
               <h1>{detailInfo.name}</h1>
               <p>{detailInfo.type}</p>
             </section>
-            <main className='moreInfoSection'>
+            <main className="moreInfoSection">
               <div>
                 <h1>{detailInfo.name}</h1>
                 <p>{detailInfo.team}</p>
               </div>
               <div>
-                <div className='workInfo'>
+                <div className="workInfo">
                   <div>
-                    <div className='overview'>
-                      <p className='infoName'>OVERVIEW</p>
+                    <div className="overview">
+                      <p className="infoName">OVERVIEW</p>
                       <div>{detailInfo.overview}</div>
                     </div>
-                    <div className='date'>
-                      <p className='infoName'>DATE</p>
+                    <div className="date">
+                      <p className="infoName">DATE</p>
                       <div>{detailInfo.date}</div>
                     </div>
                     {detailInfo.links && detailInfo.links.length > 0 && (
-                      <div className='Links'>
-                        <p className='infoName'>LINKS</p>
+                      <div className="Links">
+                        <p className="infoName">LINKS</p>
                         <div>
                           {detailInfo.links.length > 1 && (
                             <a
                               href={detailInfo.links[1]}
-                              target='_blank'
-                              rel='noopener noreferrer'
+                              target="_blank"
+                              rel="noopener noreferrer"
                             >
                               <p>배포</p>
                             </a>
                           )}
                           <a
                             href={detailInfo.links[0]}
-                            target='_blank'
-                            rel='noopener noreferrer'
+                            target="_blank"
+                            rel="noopener noreferrer"
                           >
                             <p>코드</p>
                           </a>
@@ -393,27 +393,27 @@ export default function WorkDetail() {
                       </div>
                     )}
 
-                    <div className='tools'>
-                      <p className='infoName'>TOOLS</p>
+                    <div className="tools">
+                      <p className="infoName">TOOLS</p>
                       <div>{detailInfo.tools}</div>
                     </div>
                     {detailInfo.role && (
-                      <div className='role'>
-                        <p className='infoName'>ROLE</p>
+                      <div className="role">
+                        <p className="infoName">ROLE</p>
                         <div>{detailInfo.role}</div>
                       </div>
                     )}
                   </div>
                 </div>
-                <div className='workGif'>
-                  <img src={imac} alt='imac' className='imac' />
+                <div className="workGif">
+                  <img src={imac} alt="imac" className="imac" />
                   <div className={`imacGif ${detailInfo.name}gif`} />
                 </div>
               </div>
             </main>
           </div>
-          <div className='eclipse' />
-          <div className='moreDetail'>
+          <div className="eclipse" />
+          <div className="moreDetail">
             <h1>DETAIL</h1>
             {detailInfo.detail &&
               detailInfo.detail.length > 0 &&

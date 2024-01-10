@@ -16,7 +16,11 @@
 }
 
 .backPath {
-  background: linear-gradient(0deg, #fefdf9 51.15%, rgba(0, 0, 0, 0.144) 100%);
+  background: linear-gradient(
+    0deg,
+    #fefdf9 60.15%,
+    rgba(183, 183, 183, 0.144) 100%
+  );
   width: 100%;
   height: toSize(2400);
   position: relative;
