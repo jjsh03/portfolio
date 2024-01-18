@@ -1,14 +1,26 @@
-@import '../../config/globalStyles.scss';
-@import '../../config/utils';
+@import "../../config/globalStyles.scss";
+@import "../../config/utils";
 
 .mainContainer .aboutSection {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.5)),
-    url('../../asset/wave.gif');
+  // background-image: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.5)),
+  //   url('../../asset/wave.gif');
   background-size: cover;
   padding-top: 0;
+  position: relative;
+
+  .aboutBackVideo {
+    position: absolute;
+    z-index: -100;
+    margin-left: toSize(-100);
+    filter: brightness(50%);
+
+    .aboutWave {
+      z-index: -100;
+    }
+  }
 
   .aboutMe {
-    font-family: 'LEMON MILK';
+    font-family: "LEMON MILK";
     font-size: toSize(350);
     font-weight: 700;
     text-wrap: nowrap;
@@ -26,7 +38,7 @@
 
   .aboutOverviewTitle,
   .aboutSkillTitle {
-    font-family: 'crima';
+    font-family: "crima";
     font-size: toSize(22);
     margin: toSize(16) 0;
   }
@@ -37,7 +49,7 @@
 
   .overviewContent,
   .skillContent {
-    font-family: 'PyeongChang';
+    font-family: "PyeongChang";
     font-size: toSize(20);
     line-height: 160%;
 

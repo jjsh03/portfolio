@@ -1,5 +1,5 @@
-@import '../../config/globalStyles.scss';
-@import '../../config/utils';
+@import "../../config/globalStyles.scss";
+@import "../../config/utils";
 
 .mainContainer section {
   height: 100vh;
@@ -24,7 +24,7 @@
   }
   h1 {
     position: absolute;
-    font-family: 'PyeongChangPeace';
+    font-family: "PyeongChangPeace";
     font-size: toSize(80);
   }
   .mainTitle h1:nth-child(2) {
@@ -32,7 +32,7 @@
     animation: wave 2s ease-in-out infinite;
   }
   p {
-    font-family: 'PyeongChang';
+    font-family: "PyeongChang";
     font-size: toSize(20);
     margin-top: toSize(320);
   }
@@ -61,7 +61,6 @@
   }
 
   .waveImg {
-    background-image: url('../../asset/wave.png');
     background-size: cover;
     width: toSize(430);
     height: toSize(660);
@@ -72,7 +71,6 @@
     position: absolute;
     left: toSize(250);
     .profileImg {
-      background-image: url('../../asset/profile.png');
       background-size: cover;
       width: toSize(430);
       height: toSize(660);
@@ -252,7 +250,7 @@
 }
 
 .loading {
-  font-family: 'LEMON MILK';
+  font-family: "LEMON MILK";
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,5 +1,5 @@
-@import '../../config/globalStyles.scss';
-@import '../../config/utils';
+@import "../../config/globalStyles.scss";
+@import "../../config/utils";
 
 .backArrow {
   width: toSize(80);
@@ -16,7 +16,11 @@
 }
 
 .backPath {
-  background: linear-gradient(0deg, #fefdf9 51.15%, rgba(0, 0, 0, 0.144) 100%);
+  background: linear-gradient(
+    0deg,
+    #fefdf9 60.15%,
+    rgba(183, 183, 183, 0.144) 100%
+  );
   width: 100%;
   height: toSize(2400);
   position: relative;
@@ -36,13 +40,13 @@
       width: toSize(145);
     }
     h1 {
-      font-family: 'LEMON MILK';
+      font-family: "LEMON MILK";
       font-size: toSize(100);
       font-weight: 700;
       margin: toSize(60) 0 toSize(35) 0;
     }
     p {
-      font-family: 'crima';
+      font-family: "crima";
       font-size: toSize(36);
       margin: 0;
     }
@@ -60,14 +64,14 @@
       align-items: flex-end;
 
       h1 {
-        font-family: 'LEMON MILK';
+        font-family: "LEMON MILK";
         font-size: toSize(100);
         font-weight: 700;
         margin: 0;
       }
 
       p {
-        font-family: 'Pretendard';
+        font-family: "Pretendard";
         font-size: toSize(26);
         font-weight: 500;
         margin-left: toSize(30);
@@ -88,13 +92,13 @@
 
     .infoName {
       font-size: toSize(24);
-      font-family: 'Pretendard';
+      font-family: "Pretendard";
       font-weight: 700;
       margin: toSize(40) 0 toSize(20) 0;
     }
 
     & > div > div > div {
-      font-family: 'Pretendard';
+      font-family: "Pretendard";
       font-size: toSize(20);
       display: flex;
 
@@ -123,24 +127,12 @@
       position: absolute;
       z-index: 1;
     }
-    .imacGif {
+    .imacGIF {
       background-size: cover;
       width: toSize(830);
       height: toSize(440);
       position: relative;
       margin-top: toSize(30);
-    }
-    .BEATBAYgif {
-      background-image: url('../../asset/beatbay_imac.gif');
-    }
-    .MEALSACgif {
-      background-image: url('../../asset/mealsac_imac.gif');
-    }
-    .PORTFOLIOgif {
-      background-image: url('../../asset/portfolio_imac.gif');
-    }
-    .AH-WHEWgif {
-      background-image: url('../../asset/ahwhew_imac.gif');
     }
   }
 }
@@ -156,7 +148,7 @@
   flex-direction: column;
   align-items: center;
   h1 {
-    font-family: 'LEMON MILK';
+    font-family: "LEMON MILK";
     text-decoration: underline;
     margin: toSize(160);
     font-size: toSize(48);
@@ -165,7 +157,7 @@
 
 .detailContainer footer {
   height: toSize(300);
-  font-family: 'crima';
+  font-family: "crima";
   font-size: toSize(20);
   display: flex;
   justify-content: center;
