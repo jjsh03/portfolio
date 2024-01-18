@@ -11,10 +11,10 @@ import artboard7 from '../../asset/artboard7.png';
 import prevIcon from '../../asset/prev.svg';
 import nextIcon from '../../asset/next.svg';
 import Slider from 'react-slick';
-import modal1 from '../../asset/beatbay_figma.png';
-import modal2 from '../../asset/mealsac_figma.png';
-import modal3 from '../../asset/portfolio_figma.png';
-import modal4 from '../../asset/ahwhew_figma.png';
+import modal1 from '../../asset/beatbay_figma.webp';
+import modal2 from '../../asset/mealsac_figma.webp';
+import modal3 from '../../asset/portfolio_figma.webp';
+import modal4 from '../../asset/ahwhew_figma.webp';
 import { HashLoader } from 'react-spinners';
 
 export default function DesignCompo() {
