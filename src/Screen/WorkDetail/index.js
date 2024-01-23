@@ -215,7 +215,10 @@ export default function WorkDetail() {
           5. 감정 분석 결과에 따른 사용자별 상품 추천
         </div>
       ),
-      links: ["https://github.com/sessac-3rd-team-A/FE", "http://ahwhew.shop/"],
+      links: [
+        "https://github.com/sessac-3rd-team-A/FE",
+        "https://www.ahwhew.com/",
+      ],
       tools: "HTML, CSS, TypeScript, Sass, React, Next.js, Figma, Git",
       role: (
         <div>
